@@ -47,16 +47,7 @@
 						</ul>
 					<?php } else { ?>
 						<form method="POST" action="<?= $this->url('security_login'); ?>" id="signin" class="navbar-form navbar-right" role="form">
-							<div class="input-group">
-								<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-								<input id="email" type="email" class="form-control" name="email" value="" placeholder="Email Address">
-							</div>
-							<div class="input-group">
-								<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-								<input id="password" type="password" class="form-control" name="password" value="" placeholder="Password">
-							</div>
-							<button class="btn btn-primary" name="loginForm">Connexion</button>
-							<a href="<?= $this->url('security_register') ?>" class="btn btn-info">Inscription</a>
+							<a href="<?= $this->url('security_register') ?>" class="btn btn-info">Inscription/Connexion</a>
 						</form>
 					<?php } ?>
 				</div>
@@ -65,11 +56,11 @@
 	</header>
 
 	<div class="container">
-		<?php if($this->e($title) == "Accueil") { ?>
-		<?php } else{
-			'<h1>'. $this->e($title).'</h1>';
-
-		} ?>
+		<?php if($title != 'Accueil'){; ?>
+			<h1 class=text-center><?php echo $title?></h1>
+		<?php } ?>
+		<br>
+		<br>
 		<section>
 			<?php if ($w_flash_message) {
 				echo '<div class="alert alert-'.$w_flash_message->level.'">'.$w_flash_message->message.'</div>';
@@ -84,5 +75,6 @@
 
 	<script src="<?= $this->assetUrl('node_modules/jquery/dist/jquery.min.js') ?>"></script>
 	<script src="<?= $this->assetUrl('node_modules/bootstrap/dist/js/bootstrap.min.js') ?>"></script>
+	<script src="<?= $this->assetUrl('script/login.js') ?>"></script>
 </body>
 </html>

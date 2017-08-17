@@ -39,7 +39,7 @@
 <section id="etape3">
 	<div>
 		<h2>3. ECLATE-TOI !</h2>
-		<button class="btn btn-primary" name="registerForm">Je m'inscris !</button>
+		<a href="<?= $this->url('security_register')?>"><button class="btn btn-primary" name="registerForm">Je m'inscris !</button></a>
 	</div>
 </section>
 <!-- Fin étape 3 -->

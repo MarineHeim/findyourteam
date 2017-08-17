@@ -12,35 +12,80 @@ Login, email, mot de passe, confirmer le mot de passe
     'role' => 'user'
 ])
 */
-$this->layout('layout', ['title' => 'Inscription']); ?>
+$this->layout('layout', ['title' => 'Inscription/Connexion']); ?>
 
 <?php $this->start('main_content'); ?>
-    <div class="row">
-        <h1 class="text-center">Formulaire d'inscription</h1>
-        <div class="col-md-6 col-md-offset-3">
-            <form method="POST">
-                <div class="form-group <?php echo isset($errors['login']) ? 'has-error' : ''; ?>">
-                    <label class="control-label" for="login">Login:</label>
-                    <input type="text" name="login" id="login" class="form-control" value="<?php echo $login; ?>">
-                    <span class="help-block"><?php echo isset($errors['login']) ? $errors['login'] : ''; ?></span>
-                </div>
+
+    <div class="container">
+   <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="panel panel-login">
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-lg-12">
+              <form id="login-form" action="#" method="post" role="form" style="display: block;">
+                <h2>CONNEXION</h2>
                 <div class="form-group <?php echo isset($errors['email']) ? 'has-error' : ''; ?>">
-                    <label class="control-label" for="email">Email:</label>
-                    <input type="email" name="email" id="email" class="form-control" value="<?php echo $email; ?>">
-                    <span class="help-block"><?php echo isset($errors['email']) ? $errors['email'] : ''; ?></span>
+                  <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Adresse email" value="">
+                  <span class="help-block"><?php echo isset($errors['email']) ? 'has-error' : ''; ?></span>
+
                 </div>
-                <div class="form-group <?php echo isset($errors['password']) ? 'has-error' : ''; ?>">
-                    <label class="control-label" for="password">Mot de passe:</label>
-                    <input type="password" name="password" id="password" class="form-control">
+                  <div class="form-group <?php echo isset($errors['password']) ? 'has-error' : ''; ?>">
+                    <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Mot de passe">
+                    <span class="help-block"><?php echo isset($errors['password']) ? 'has-error' : ''; ?></span>
+
+                  </div>
+                  <div class="col-xs-6 form-group pull-left checkbox">
+                    <input id="checkbox1" type="checkbox" name="remember">
+                    <label for="checkbox1">Se souvenir de moi</label>
+                  </div>
+                  <div class="col-xs-6 form-group pull-right">
+                        <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Connexion">
+                  </div>
+              </form>
+              <form id="register-form" action="#" method="post" role="form" style="display: none;">
+                <h2>S'ENREGISTRER</h2>
+                  <div class="form-group <?php echo isset($errors['login']) ? 'has-error' : ''; ?>">
+                    <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Nom d'utilisateur" value="">
+                    <span class="help-block"><?php echo isset($errors['login']) ? 'has-error' : ''; ?></span>
+
+                  </div>
+                  <div class="form-group <?php echo isset($errors['email']) ? 'has-error' : ''; ?>">
+                    <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Adresse email" value="">
+                    <span class="help-block"><?php echo isset($errors['email']) ? 'has-error' : ''; ?></span>
+
+                  </div>
+                  <div class="form-group <?php echo isset($errors['password']) ? 'has-error' : ''; ?>">
+                    <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Mot de passe">
                     <span class="help-block"><?php echo isset($errors['password']) ? $errors['password'] : ''; ?></span>
-                </div>
-                <div class="form-group <?php echo isset($errors['password']) ? 'has-error' : ''; ?>">
-                    <label class="control-label" for="cf-password">Confirmer le mot de passe:</label>
-                    <input type="password" name="cf-password" id="cf-password" class="form-control">
+                  </div>
+                  <div class="form-group <?php echo isset($errors['password']) ? 'has-error' : ''; ?>">
+                    <input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirmer le mot de passe">
                     <span class="help-block"><?php echo isset($errors['password']) ? $errors['password'] : ''; ?></span>
-                </div>
-                <button class="btn btn-primary" name="registerForm">Je m'inscris !</button>
-            </form>
+                  </div>
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-sm-6 col-sm-offset-3">
+                        <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="S'enregistrer">
+                      </div>
+                    </div>
+                  </div>
+              </form>
+            </div>
+          </div>
         </div>
+        <div class="panel-heading">
+          <div class="row">
+            <div class="col-xs-6 tabs">
+              <a href="#" class="active" id="login-form-link"><div class="login">CONNEXION</div></a>
+            </div>
+            <div class="col-xs-6 tabs">
+              <a href="#" id="register-form-link"><div class="register">S'ENREGISTRER</div></a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+</div>
 <?php $this->stop('main_content'); ?>

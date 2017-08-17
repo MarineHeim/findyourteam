@@ -32,14 +32,13 @@ class DefaultController extends Controller
 	{
 		$this->show('default/jeux');
 	}
-	public function messagerie()
-	{
-		$this->show('default/messagerie');
-	}
 	public function team()
 	{
 		$this->show('default/team');
 	}
-
+	public function messagerie()
+	{
+		$this->show('default/messagerie');
+	}
 
 }

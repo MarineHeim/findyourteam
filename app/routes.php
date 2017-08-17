@@ -6,7 +6,7 @@
 		['GET|POST', '/contact', 'Default#contact', 'default_contact'],
 
 		['GET|POST', '/register', 'Security#register', 'security_register'],
-		['POST', '/login', 'Security#login', 'security_login'],
+		['GET|POST', '/register', 'Security#login', 'security_login'],
 		['GET', '/logout', 'Security#logout', 'security_logout'],
 
 		['GET|POST', '/profile', 'Default#profile', 'default_profile'],

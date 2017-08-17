@@ -36,10 +36,10 @@
 						<li class="<?= ($w_current_route === 'default_home') ? 'active' : ''; ?>"><a href="<?= $this->url('default_home') ?>">Accueil</a></li>
 						<li class="<?= ($w_current_route === 'default_contact') ? 'active' : ''; ?>"><a href="<?= $this->url('default_contact') ?>">Contact</a></li>
 						<li class="<?= ($w_current_route === 'games_allgames') ? 'active' : ''; ?>"><a href="<?= $this->url('games_allgames') ?>">Jeux</a></li>
-
-
-
 					</ul>
+
+					<input method="" action"" id="search" class="navbar-form " role="form" value="Recherche.."></input>
+
 					<?php if ($w_user) { ?>
 						<p class="navbar-text navbar-right"><a class="navbar-link" href="<?= $this->url('default_profile') ?>"><?php echo $w_user['username']; ?></a></p>
 						<ul class="nav navbar-nav navbar-right">

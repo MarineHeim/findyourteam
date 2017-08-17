@@ -7,7 +7,7 @@
                <div class="col-md-3 col-sm-4">
                  <center>
                 <a href="<?= $this->url('games_onegame', ['id' => $game['id']]); ?>">
-                   <img width="280" height="150" src="assets/img/jeux/<?php echo $game['picture']; ?>" alt="...">
+                   <img class="img-responsive" src="assets/img/jeux/<?php echo $game['picture']; ?>" alt="...">
                 </a>
                 <div class="caption">
                    <h3><?php echo $game['name'] ?></h3>

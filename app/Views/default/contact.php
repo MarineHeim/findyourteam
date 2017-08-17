@@ -2,9 +2,9 @@
 
 <?php $this->start('main_content'); ?>
 
-<h1 class="text-center">Formulaire de contact</h1>
+<!-- <h1 class="text-center">Formulaire de contact</h1>
 <br>
-<br>
+<br> -->
 <p>N'hésitez pas à nous contacter pour toute demande, nous vous répondrons dans les plus brefs délais.</p>
 <br>
     <form method="POST">

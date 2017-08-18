@@ -23,7 +23,7 @@ $this->layout('layout', ['title' => 'Inscription/Connexion']); ?>
         <div class="panel-body">
           <div class="row">
             <div class="col-lg-12">
-              <form id="login-form" action="#" method="post" role="form" style="display: block;">
+              <form id="login-form" action="" method="post" role="form" style="display: block;">
                 <h2>CONNEXION</h2>
                 <div class="form-group <?php echo isset($errors['email']) ? 'has-error' : ''; ?>">
                   <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Adresse email" value="">
@@ -40,33 +40,34 @@ $this->layout('layout', ['title' => 'Inscription/Connexion']); ?>
                     <label for="checkbox1">Se souvenir de moi</label>
                   </div>
                   <div class="col-xs-6 form-group pull-right">
-                        <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Connexion">
+                        <button name="loginForm" id="loginForm" tabindex="4" class="form-control btn btn-login">Connexion</button>
                   </div>
               </form>
-              <form id="register-form" action="#" method="post" role="form" style="display: none;">
-                <h2>S'ENREGISTRER</h2>
-                  <div class="form-group <?php echo isset($errors['login']) ? 'has-error' : ''; ?>">
-                    <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Nom d'utilisateur" value="">
-                    <span class="help-block"><?php echo isset($errors['login']) ? 'has-error' : ''; ?></span>
 
+              <form id="register-form" action="" method="post" role="form" style="display: none;">
+                <h2>S'ENREGISTRER</h2>
+
+                  <div class="form-group <?php echo isset($errors['login']) ? 'has-error' : ''; ?>">
+                    <input type="text" name="login" id="login" tabindex="1" class="form-control" placeholder="Nom d'utilisateur" value="">
+                    <span class="help-block"><?php echo isset($errors['login']) ? 'has-error' : ''; ?></span>
                   </div>
+
                   <div class="form-group <?php echo isset($errors['email']) ? 'has-error' : ''; ?>">
                     <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Adresse email" value="">
                     <span class="help-block"><?php echo isset($errors['email']) ? 'has-error' : ''; ?></span>
-
                   </div>
                   <div class="form-group <?php echo isset($errors['password']) ? 'has-error' : ''; ?>">
                     <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Mot de passe">
                     <span class="help-block"><?php echo isset($errors['password']) ? $errors['password'] : ''; ?></span>
                   </div>
                   <div class="form-group <?php echo isset($errors['password']) ? 'has-error' : ''; ?>">
-                    <input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirmer le mot de passe">
+                    <input type="password" name="cf-password" id="cf-password" tabindex="2" class="form-control" placeholder="Confirmer le mot de passe">
                     <span class="help-block"><?php echo isset($errors['password']) ? $errors['password'] : ''; ?></span>
                   </div>
                   <div class="form-group">
                     <div class="row">
                       <div class="col-sm-6 col-sm-offset-3">
-                        <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="S'enregistrer">
+                        <button name="registerForm" id="registerForm" tabindex="4" class="form-control btn btn-register" value="S'enregistrer">S'enregistrer</button>
                       </div>
                     </div>
                   </div>

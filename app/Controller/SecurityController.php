@@ -60,19 +60,7 @@ class SecurityController extends \W\Controller\Controller
                 $this->redirectToRoute('default_home');
             }
         }
-    
-        $this->show('security/register', [
-            'errors' => $errors,
-            'login' => $login,
-            'email' => $email
-        ]);
-    }
 
-    /**
-     * Connexion utilisateur
-     */
-    public function login()
-    {
         if (isset($_POST['loginForm'])) {
             $auth_manager = new \W\Security\AuthentificationModel();
             // On vérifie que les champs email et password sont un couple valide dans la base de données.
@@ -88,7 +76,14 @@ class SecurityController extends \W\Controller\Controller
             }
             $this->redirectToRoute('default_home');
         }
+
+        $this->show('security/register', [
+            'errors' => $errors,
+            'login' => $login,
+            'email' => $email
+        ]);
     }
+
 
     /**
      * Déconnexion utilisateur

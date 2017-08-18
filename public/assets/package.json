@@ -1,0 +1,27 @@
+{
+  "name": "findyourteam",
+  "version": "1.0.0",
+  "description": "W est un framework minimaliste. Il suit les structures et les grand thèmes des frameworks PHP OO MVC actuels, tout en en facilitant l'approche. Ce framework possède toutefois de nombreuses propriétés diverses permettant de répondre aux cas les plus habituels.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarineHeim/findyourteam.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarineHeim/findyourteam/issues"
+  },
+  "homepage": "https://github.com/MarineHeim/findyourteam#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.2.1"
+  }
+}

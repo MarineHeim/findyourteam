@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="<?= $this->assetUrl('node_modules/bootstrap/dist/css/bootstrap.min.css') ?>">
 	<link rel="stylesheet" href="<?= $this->assetUrl('node_modules/font-awesome/css/font-awesome.min.css') ?>">
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/style.css') ?>">
-	<link rel="icon" type="image/png" href="favicon.png" />
+	<link rel="icon" type="image/png" href="<?= $this->assetUrl('img/favicon.png') ?>">
 
 </head>
 <body>
@@ -44,8 +44,6 @@
 						<li class="<?= ($w_current_route === 'games_allgames') ? 'active' : ''; ?>"><a href="<?= $this->url('games_allgames') ?>">Jeux</a></li>
 					</ul>
 
-					<input type="text" class="input-search navbar-form" placeholder="Recherche...">
-                    <button type="submit" class="btn-search">Go!</button>
 
 
 					<?php if ($w_user) { ?>
@@ -58,6 +56,14 @@
 							<a href="<?= $this->url('security_register') ?>" class="btn btn-info">Inscription/Connexion</a>
 						</form>
 					<?php } ?>
+
+
+					<form class="navbar-form navbar-right">
+        				<div class="form-group search">
+          					<input type="text" class="form-control" placeholder="Recherche...">
+        				</div>
+        					<button type="submit" class="btn btn-default">Go!</button>
+      				</form>
 				</div>
 			</div>
 		</nav>

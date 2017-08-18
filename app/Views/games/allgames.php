@@ -11,7 +11,7 @@
                 </a>
                 <div class="caption">
                    <h3><?php echo $game['name'] ?></h3>
-                   <p><?php echo $game['description'] ?></p>
+                   <p class=text-justify><?php echo $game['description'] ?></p>
                    <p>Nombre de joueurs : <?php echo $game['nb_player'] ?></p>
                    <p>Nombre de Teams : <?php echo $game['nb_team'] ?></p>
                    <p><a href="<?= $this->url('games_onegame', ['id' => $game['id']]); ?>" class="btn btn-primary" role="button">Voir jeu</a> </p> <br><br><br>

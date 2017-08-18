@@ -56,7 +56,6 @@ $this->layout('layout', ['title' => 'Inscription/Connexion']); ?>
                     <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Adresse email" value="">
                     <span class="help-block"><?php echo isset($errors['email']) ? 'has-error' : ''; ?></span>
                   </div>
-
                   <div class="form-group <?php echo isset($errors['password']) ? 'has-error' : ''; ?>">
                     <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Mot de passe">
                     <span class="help-block"><?php echo isset($errors['password']) ? $errors['password'] : ''; ?></span>

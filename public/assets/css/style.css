@@ -1,5 +1,31 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,700,500);
 
+/* Header */
+
+/* Menu */
+
+.navbar {
+    background-color: transparent;
+    border: none;
+}
+
+.navbar-brand {
+    padding: 0;
+    margin: 5px;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    background-color: transparent;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: white;
+}
+
+/* Fin du menu */
+/* Fin du header */
+
+/* Body */
 body {
   background:#F7F7F7;
   color:#666666;
@@ -223,3 +249,12 @@ label {
   color: #fff;
   background-color: #2D3B55;
 }
+
+/* Footer */
+footer {
+    background-color: white;
+    padding-top: 20px;
+    margin-top: 20px;
+    color: grey;
+}
+/* Fin du footer */

@@ -10,7 +10,8 @@
 		['GET', '/logout', 'Security#logout', 'security_logout'],
 
 		['GET|POST', '/profile', 'Default#profile', 'default_profile'],
-		['GET|POST', '/team', 'Default#team', 'default_team'],
+		['GET|POST', '/teams', 'Default#teams', 'default_teams'],
+		['GET|POST', '/players', 'Default#players', 'default_players'],
 
 		['GET|POST', '/messagerie', 'Default#messagerie', 'default_messagerie'],
 

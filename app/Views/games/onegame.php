@@ -2,27 +2,47 @@
 
 <?php $this->start('main_content');?>
 
-<?php  foreach ($onegame as $game) { ?>
+<div class="contrainer">
+    <div class="row">
+        <?php  foreach ($onegame as $game) { ?>
     <center>
-  <h3><?php echo $game['name'] ?></h3>
-  <img width="350" src="<?= $this->assetUrl('img/jeux/' . $game['picture']) ?>" alt="...">
-  <p><?php echo $game['description'] ?></p>
+        <!-- Présentation du jeu -->
+        <div class="onegame">
+            <h3><?php echo $game['name'] ?></h3>
+            <br>
+            <br>
+            <img class="img-responsive" src="<?= $this->assetUrl('img/jeux/' . $game['picture']) ?>" alt="...">
+            <br>
+            <p><?php echo $game['description'] ?></p>
+            <br>
+            <p>Nombre de joueurs : <?php echo $game['nb_player'] ?></p>
+            <p>Nombre de Teams : <?php echo $game['nb_team'] ?></p>
+        </div>
+        <br>
+        <!-- Fin Présentation du jeu -->
 
 
-  <p>Nombre de joueurs : <?php echo $game['nb_player'] ?></p>
-  <p>Nombre de Teams : <?php echo $game['nb_team'] ?></p>
+        <!-- Les derniers joueurs inscrits  -->
+        <div class="col-md-6">
+            <h4>Derniers joueurs inscrits</h4>
+            <hr>
+            <p>est disponible pour jouer</p>
+            <hr>
+            <button class="btn btn-primary" name="seeGamers">Voir tous les joueurs</button>
+        </div>
+        <!-- Fin les derniers joueurs inscrits  -->
 
-  <div class="lastplayers">
-      <h4>Derniers joueurs inscrites</h4>
-      <button class="btn btn-primary" name="seeGamers">Voir tous les joueurs</button>
-  </div>
-
-  <div class="lastteams">
-      <h4>Dernières équipes inscrites</h4>
-      <button class="btn btn-primary" name="seeTeams">Voir toutes les teams</button>
-  </div>
-
-
+        <!-- Les dernières teams inscrites  -->
+        <div class="col-md-6">
+            <h4>Dernières équipes inscrites</h4>
+            <hr>
+            <p>recherche des joueurs</p>
+            <hr>
+            <button class="btn btn-primary" name="seeTeams">Voir toutes les teams</button>
+        </div>
+        <!-- Fin les dernières teams inscrites  -->
+    </div>
+</div>
   </center>
 <?php }
 

@@ -39,7 +39,7 @@
 						// Avec ternaire
 						($w_current_route === 'default_home') ? 'active' : ''; // "?" correspond au if et le ":" au else
 						?>
-						<li class="<?= ($w_current_route === 'default_home') ? 'active' : ''; ?>"><a href="<?= $this->url('default_home') ?>">Accueil</a></li>
+						<li class="<?= ($w_current_route === 'default_home') ? 'active' : ''; ?>"><a href="<?= $this->url('default_home') ?>"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
 						<li class="<?= ($w_current_route === 'default_contact') ? 'active' : ''; ?>"><a href="<?= $this->url('default_contact') ?>">Contact</a></li>
 						<li class="<?= ($w_current_route === 'games_allgames') ? 'active' : ''; ?>"><a href="<?= $this->url('games_allgames') ?>">Jeux</a></li>
 					</ul>
@@ -47,7 +47,18 @@
 
 
 					<?php if ($w_user) { ?>
-						<p class="navbar-text navbar-right"><a class="navbar-link" href="<?= $this->url('default_profile') ?>"><?php echo $w_user['username']; ?></a></p>
+						<!-- <p class="navbar-text navbar-right"><a class="navbar-link" href="<?= $this->url('default_profile') ?>"><?php echo $w_user['username']; ?></a></p> -->
+						<div class="dropdown navbar-right">
+  							<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    							<?php echo $w_user['username']; ?>
+	    						<span class="caret"></span>
+						 	</button>
+							  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+							    <li><a href="<?= $this->url('default_profile') ?>">Mon profil</a></li>
+							    <li><a href="<?= $this->url('default_messagerie') ?>">Ma messagerie</a></li>
+							    <li><a href="<?= $this->url('default_teams') ?>">Mes teams</a></li>
+							  </ul>
+						</div>
 						<ul class="nav navbar-nav navbar-right">
 							<li><a href="<?= $this->url('security_logout') ?>">Se déconnecter</a></li>
 						</ul>

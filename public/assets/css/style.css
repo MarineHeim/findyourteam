@@ -12,7 +12,6 @@
     font-style: normal;
     font-variant: normal;
     font-weight: bold;
-    line-height: 40px;
 }
 
 .navbar-brand {
@@ -39,9 +38,18 @@
   letter-spacing: 1px;
 }
 
+#sign:hover{
+  background-color : #FFFFFF;
+  color: #FF5252;
+}
+
 #go{
   color :#FF5252;
   font-weight: bold;
+}
+#go:hover{
+  background-color : #FF5252;
+  color:  #FFFFFF;
 }
 
 /* Fin du menu */
@@ -306,6 +314,11 @@ label {
   margin-bottom: 30px;
   margin-top:20px;
 }
+#btn-inscritption:hover{
+  background-color : #FFFFFF;
+  color: #FF5252;
+}
+
 /*--FIN HOME PAGE--*/
 
 /*--CONTACT--*/
@@ -313,6 +326,12 @@ h1{
   color : #FFFFFF;
   font-weight: bold;
   font-size: 40px;
+}
+#txt-contact{
+  color : #FFFFFF;
+  font-weight: bold;
+  font-size: 20px;
+
 }
 /*--FIN CONTACT--*/
 
@@ -337,6 +356,17 @@ h1{
 }
 /*--FIN ALL GAMES--*/
 
+#arrow-top{
+  color:#FFFFFF;
+  opacity: 0.5;
+  margin-top: 40px;
+  margin-bottom: 20px;
+
+}
+#arrow-top:hover{
+  color:#FF5252;
+  opacity:1;
+}
 
 /* Footer */
 footer {
@@ -344,6 +374,7 @@ footer {
     padding-top: 20px;
     margin-top: 20px;
     color: grey;
+
 }
 
 #socialicone{

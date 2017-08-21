@@ -101,9 +101,13 @@
 			<?= $this->section('main_content') ?>
 		</section>
 
-
+		<div class="container">
+			<div class="row text-right">
+				<a href="#"><i id="arrow-top" title="Retour en haut" class="fa fa-arrow-circle-up fa-3x" aria-hidden="true"></i></a>
+			</div>
+		</div>
 		<!-- Footer  -->
-		<footer>
+		<footer class="footer fixed-bottom">
 
        <div class="container">
                <div class="row text-center">

@@ -12,7 +12,7 @@ Login, email, mot de passe, confirmer le mot de passe
     'role' => 'user'
 ])
 */
-$this->layout('layout', ['title' => 'Inscription/Connexion']); ?>
+$this->layout('layout', ['title' => 'Inscription / Connexion']); ?>
 
 <?php $this->start('main_content'); ?>
 

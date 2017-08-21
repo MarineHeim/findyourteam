@@ -5,7 +5,7 @@
 <!-- <h1 class="text-center">Formulaire de contact</h1>
 <br>
 <br> -->
-<p>N'hésitez pas à nous contacter pour toute demande, nous vous répondrons dans les plus brefs délais.</p>
+<p id="txt-contact" class="text-center">N'hésitez pas à nous contacter pour toute demande, nous vous répondrons dans les plus brefs délais.</p>
 <br>
     <form method="POST">
         <div class="form-group">

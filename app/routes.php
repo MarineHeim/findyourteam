@@ -9,6 +9,10 @@
 		['GET|POST', '/register', 'Security#login', 'security_login'],
 		['GET', '/logout', 'Security#logout', 'security_logout'],
 
+		['GET', '/api/users', 'Default#userListApi', 'profile_user_list'],
+
+
+		['GET|POST', '/profile/[*:username]', 'Default#profile', 'default_profile_view'],
 		['GET|POST', '/profile', 'Default#profile', 'default_profile'],
 		['GET|POST', '/teams', 'Default#teams', 'default_teams'],
 		['GET|POST', '/players', 'Default#players', 'default_players'],

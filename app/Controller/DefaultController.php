@@ -72,4 +72,14 @@ class DefaultController extends Controller
 		$this->show('default/messagerie');
 	}
 
+	public function userListApi()
+    {
+        $user_manager = new \Model\UserModel();
+        $users = $user_manager->search( [ 'username' => $_GET['term'] ] );
+        foreach ($users as &$user) {
+            $user['url'] = $this->generateUrl('default_profile_view', ['username' => $user['username']]);
+        }
+        $this->showJson($users); // Renvoie du json et pas html
+    }
+
 }

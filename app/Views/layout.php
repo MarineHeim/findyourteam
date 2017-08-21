@@ -60,7 +60,7 @@
 
 					<form class="navbar-form navbar-right">
         				<div class="form-group search">
-          					<input type="text" class="form-control" placeholder="Recherche...">
+          					<input id="research" type="text" class="form-control" value="" placeholder="Recherche...">
         				</div>
         					<button type="submit" class="btn btn-default">Go!</button>
       				</form>
@@ -139,7 +139,9 @@
 	</div>
 
 	<script src="<?= $this->assetUrl('node_modules/jquery/dist/jquery.min.js') ?>"></script>
+	<script src="<?= $this->assetUrl('node_modules/jquery-ui/jquery-ui.js') ?>"></script>
 	<script src="<?= $this->assetUrl('node_modules/bootstrap/dist/js/bootstrap.min.js') ?>"></script>
 	<script src="<?= $this->assetUrl('script/login.js') ?>"></script>
+	<script src="<?= $this->assetUrl('script/research.js') ?>"></script>
 </body>
 </html>

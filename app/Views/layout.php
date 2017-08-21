@@ -8,6 +8,9 @@
 	<link rel="stylesheet" href="<?= $this->assetUrl('node_modules/font-awesome/css/font-awesome.min.css') ?>">
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/style.css') ?>">
 	<link rel="icon" type="image/png" href="<?= $this->assetUrl('img/favicon.png') ?>">
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Quicksand" />
+	<script type="text/javascript"> $(document).ready(function(){ $('.top').click(function(){ $('html,body').animate({scrollTop: 0},'slow'); }); }); </script>
+
 
 </head>
 <body>
@@ -64,7 +67,7 @@
 						</ul>
 					<?php } else { ?>
 						<form method="POST" action="<?= $this->url('security_login'); ?>" id="signin" class="navbar-form navbar-right" role="form">
-							<a href="<?= $this->url('security_register') ?>" class="btn btn-info">Inscription/Connexion</a>
+							<a id="sign" href="<?= $this->url('security_register') ?>" class="btn btn-info">Inscription / Connexion</a>
 						</form>
 					<?php } ?>
 
@@ -73,7 +76,7 @@
         				<div class="form-group search">
           					<input id="research" type="text" class="form-control" value="" placeholder="Recherche...">
         				</div>
-        					<button type="submit" class="btn btn-default">Go!</button>
+        					<button id="go" type="submit" class="btn btn-default">GO !</button>
       				</form>
 				</div>
 			</div>
@@ -106,15 +109,15 @@
                <div class="row text-center">
                   <ul class="list-inline">
                                    <li>
-                                        <a href="#"><i class="fa fa-facebook fa-2x"></i></a>
+                                        <a href="#"><i id="socialicone" class="fa fa-facebook-square fa-2x"></i></a>
                                    </li>
 
                                    <li>
-                                        <a href="#"><i class="fa fa-linkedin fa-2x"></i></a>
+                                        <a href="#"><i id="socialicone" class="fa fa-linkedin-square fa-2x"></i></a>
                                    </li>
 
                                    <li>
-                                        <a href="#"><i class="fa fa-tumblr fa-2x"></i></a>
+                                        <a href="#"><i id="socialicone" class="fa fa-tumblr-square fa-2x"></i></a>
                                    </li>
 
 
@@ -125,15 +128,15 @@
                       <ul class="menu list-inline">
 
                              <li>
-                                <a href="<?= $this->url('default_home') ?>">Accueil</a>
+                                <a id="footer-menu" href="<?= $this->url('default_home') ?>">Accueil</a>
                               </li>
 
                               <li>
-                                 <a href="<?= $this->url('default_contact') ?>">Contact</a>
+                                 <a id="footer-menu" href="<?= $this->url('default_contact') ?>">Contact</a>
                               </li>
 
                               <li>
-                                <a href="<?= $this->url('games_allgames') ?>">Jeux</a>
+                                <a id="footer-menu" href="<?= $this->url('games_allgames') ?>">Jeux</a>
                               </li>
                      </ul>
                  </div>
@@ -142,7 +145,7 @@
         </div>
 
          <div class="row text-center">
-         	<p>Find your team © 2017 All rights reserved</p>
+         	<p class="droits-legal" >Find your team © 2017 All rights reserved</p>
          </div>
 
 		</footer>

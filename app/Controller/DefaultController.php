@@ -17,6 +17,25 @@ class DefaultController extends Controller
 
 	public function contact()
 	{
+		if(isset($_POST['contactForm'])) {
+		$email = $_POST['mail'];
+		$message = $_POST['message'];
+
+		    $mailDestinataire="marine.heim@outlook.com";
+
+			$from = "From: <".$email.">";
+
+			$messageMail = "
+		            Formulaire de contact:
+
+		            Email :   ".$email."
+					Message :   ".$message."";
+
+			mail($mailDestinataire, $messageMail, $from, $message);
+
+		$this->flash('Votre message a bien été envoyé.', 'success');
+		}
+
 		$this->show('default/contact');
 	}
 

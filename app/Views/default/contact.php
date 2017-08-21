@@ -18,6 +18,6 @@
         </div>
         <br>
         <br>
-        <button class="btn btn-default">Envoyer</button>
+        <button name="contactForm" class="btn btn-default">Envoyer</button>
     </form>
 <?php $this->stop('main_content'); ?>

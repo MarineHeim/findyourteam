@@ -12,5 +12,4 @@ class UserModel extends \W\Model\UsersModel
         $query = $this->dbh->query('SELECT id FROM ' . $this->table);
         return $query->fetchAll(\PDO::FETCH_COLUMN);
     }
-
 }

@@ -2,11 +2,10 @@
 
 <?php $this->start('main_content'); ?>
 
-<!-- <h1 class="text-center">Formulaire de contact</h1>
-<br>
-<br> -->
+
 <p>N'hésitez pas à nous contacter pour toute demande, nous vous répondrons dans les plus brefs délais.</p>
 <br>
+    <!-- Formulaire de contact -->
     <form method="POST">
         <div class="form-group">
             <label for="mail">Mail:</label>
@@ -20,4 +19,5 @@
         <br>
         <button name="contactForm" class="btn btn-default">Envoyer</button>
     </form>
+    <!-- Fin du formulaire de contact -->
 <?php $this->stop('main_content'); ?>

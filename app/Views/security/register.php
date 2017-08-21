@@ -25,8 +25,9 @@ $this->layout('layout', ['title' => 'Inscription/Connexion']); ?>
             <div class="col-lg-12">
               <form id="login-form" action="" method="post" role="form" style="display: block;">
                 <h2>CONNEXION</h2>
+
                 <div class="form-group <?php echo isset($errors['email']) ? 'has-error' : ''; ?>">
-                  <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Adresse email" value="">
+                  <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Adresse email">
                   <span class="help-block"><?php echo isset($errors['email']) ? 'has-error' : ''; ?></span>
 
                 </div>

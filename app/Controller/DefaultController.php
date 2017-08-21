@@ -88,8 +88,10 @@ class DefaultController extends Controller
 	}
 	public function messagerie()
 	{
-		$this->show('default/messagerie');
+		$this->show('messagerie/envoi');
+
 	}
+
 
 	public function userListApi()
     {

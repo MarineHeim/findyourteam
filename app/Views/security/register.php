@@ -12,11 +12,11 @@ Login, email, mot de passe, confirmer le mot de passe
     'role' => 'user'
 ])
 */
-$this->layout('layout', ['title' => 'Inscription/Connexion']); ?>
+$this->layout('layout', ['title' => 'Inscription / Connexion']); ?>
 
 <?php $this->start('main_content'); ?>
 
-    <div class="container">
+  <div class="container">
    <div class="row">
     <div class="col-md-6 col-md-offset-3">
       <div class="panel panel-login">
@@ -24,8 +24,7 @@ $this->layout('layout', ['title' => 'Inscription/Connexion']); ?>
           <div class="row">
             <div class="col-lg-12">
               <form id="login-form" action="" method="post" role="form" style="display: block;">
-                <h2>CONNEXION</h2>
-
+                <h2 class="title-register">CONNEXION</h2>
                 <div class="form-group <?php echo isset($errors['email']) ? 'has-error' : ''; ?>">
                   <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Adresse email">
                   <span class="help-block"><?php echo isset($errors['email']) ? 'has-error' : ''; ?></span>
@@ -38,7 +37,7 @@ $this->layout('layout', ['title' => 'Inscription/Connexion']); ?>
                   </div>
                   <div class="col-xs-6 form-group pull-left checkbox">
                     <input id="checkbox1" type="checkbox" name="remember">
-                    <label for="checkbox1">Se souvenir de moi</label>
+                    <label class="remember-me" for="checkbox1">Se souvenir de moi</label>
                   </div>
                   <div class="col-xs-6 form-group pull-right">
                         <button name="loginForm" id="loginForm" tabindex="4" class="form-control btn btn-login">Connexion</button>
@@ -46,13 +45,11 @@ $this->layout('layout', ['title' => 'Inscription/Connexion']); ?>
               </form>
 
               <form id="register-form" action="" method="post" role="form" style="display: none;">
-                <h2>S'ENREGISTRER</h2>
-
+                <h2 class="title-register" >S'ENREGISTRER</h2>
                   <div class="form-group <?php echo isset($errors['login']) ? 'has-error' : ''; ?>">
                     <input type="text" name="login" id="login" tabindex="1" class="form-control" placeholder="Nom d'utilisateur" value="">
                     <span class="help-block"><?php echo isset($errors['login']) ? 'has-error' : ''; ?></span>
                   </div>
-
                   <div class="form-group <?php echo isset($errors['email']) ? 'has-error' : ''; ?>">
                     <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Adresse email" value="">
                     <span class="help-block"><?php echo isset($errors['email']) ? 'has-error' : ''; ?></span>

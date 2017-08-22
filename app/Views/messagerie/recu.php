@@ -1,15 +1,16 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Vos messages reçus</title>
-    </head>
-    <body>
+<?php $this->layout('layout', ['title' => 'Messages reçus']); ?>
+
+<?php $this->start('main_content');?>
+
+        <!-- Mini menu messagerie -->
         <ul class="nav nav-pills" role="tablist">
-          <li role="presentation" class="active"><a href="">Envoyer un message<span class="badge">0</span></a></li>
-          <li role="presentation"><a href="">Messages reçus</a></li>
+          <li role="presentation" class="active"><a href="<?= $this->url('messagerie_envoi') ?>">Envoyer un message</a></li>
+          <li role="presentation"><a href="<?= $this->url('messagerie_recu') ?>">Messages reçus<span class="badge">0</span></a></li>
           <li role="presentation"><a href="">Messages envoyés<span class="badge">0</span></a></li>
         </ul>
+        <!-- Fin du mini menu messagerie -->
         <br>
         <br>
-        <p>Vous avez .... messages non lus</p>
+
+
+<?php $this->stop('main_content'); ?>

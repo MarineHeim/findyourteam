@@ -18,9 +18,11 @@
 		['GET|POST', '/players', 'Default#players', 'default_players'],
 
 		['GET|POST', '/messagerie', 'Messagerie#envoi', 'messagerie_envoi'],
+
 		['GET|POST', '/messagerie/recu', 'Messagerie#recu', 'messagerie_recu'],
 		['GET|POST', '/messagerie/lecture', 'Messageriet#lecture', 'messagerie_lecture'],
 		['GET|POST', '/messagerie/delete', 'Messagerie#delete', 'messagerie_delete'],
+
 
 		['GET', '/jeux', 'Games#allgames', 'games_allgames'],
 

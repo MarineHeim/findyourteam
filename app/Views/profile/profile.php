@@ -11,20 +11,13 @@
 
 		<div class="row">
 			<div class="col-md-8">
-				<div class="media">
-					<h3>Tes jeux :</h3>
-				  	<div class="media-left">
-				    	<a href="#">
-				      	<img class="media-object" src="..." alt="...">
-					    </a>
-					</div>
-					<div class="media-body">
-					    <h4 class="media-heading">Media heading</h4>
-					    ...
-					</div>
+				<div class="Avatar">
+					<form id="updateavatar"method="post" enctype="multipart/form-data">
+						<label>Avatar</label>
+						<input class="btn btn-default" type="file" name="avatar" id="avatar" value="">
+						<button class="btn btn-default" name="updateavatar" id="updateavatar">Ajouter/modifier description</button>
+					</form>
 				</div>
-
-				<br>
 
 				<div class="">
 					<h3>Ta présentation :</h3>

@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/style.css') ?>">
 	<link rel="icon" type="image/png" href="<?= $this->assetUrl('img/favicon.png') ?>">
 	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Quicksand" />
-	<script type="text/javascript"> $(document).ready(function(){ $('.top').click(function(){ $('html,body').animate({scrollTop: 0},'slow'); }); }); </script>
+
 
 
 </head>
@@ -90,8 +90,7 @@
 		<?php if($title != 'Accueil'){; ?>
 			<h1 class=text-center><?php echo $title?></h1>
 		<?php } ?>
-		<br>
-		<br>
+
 	<!--Fin titre des pages  -->
 
 		<section>
@@ -100,66 +99,56 @@
 			} ?>
 			<?= $this->section('main_content') ?>
 		</section>
+	</div>
 
+		<!-- Arrow-top -->
 		<div class="container">
-			<div class="row text-right">
-				<a href="#"><i id="arrow-top" title="Retour en haut" class="fa fa-arrow-circle-up fa-3x" aria-hidden="true"></i></a>
-			</div>
-		</div>
+				<a href="#"><i id="arrow-top" title="Retour en haut" class="fa fa-arrow-circle-up fa-3x"></i></a>		</div>
+
+		<!-- Arrow-top -->
 		<!-- Footer  -->
-		<footer class="footer fixed-bottom">
-
-       <div class="container">
-               <div class="row text-center">
-                  <ul class="list-inline">
-                                   <li>
-                                        <a href="#"><i id="socialicone" class="fa fa-facebook-square fa-2x"></i></a>
-                                   </li>
-
-                                   <li>
-                                        <a href="#"><i id="socialicone" class="fa fa-linkedin-square fa-2x"></i></a>
-                                   </li>
-
-                                   <li>
-                                        <a href="#"><i id="socialicone" class="fa fa-tumblr-square fa-2x"></i></a>
-                                   </li>
-
-
-                         </ul>
-                </div>
-
-                <div class="row text-center">
-                      <ul class="menu list-inline">
-
-                             <li>
-                                <a id="footer-menu" href="<?= $this->url('default_home') ?>">Accueil</a>
-                              </li>
-
-                              <li>
-                                 <a id="footer-menu" href="<?= $this->url('default_contact') ?>">Contact</a>
-                              </li>
-
-                              <li>
-                                <a id="footer-menu" href="<?= $this->url('games_allgames') ?>">Jeux</a>
-                              </li>
-                     </ul>
-                 </div>
-
-
-        </div>
-
-         <div class="row text-center">
-         	<p class="droits-legal" >Find your team © 2017 All rights reserved</p>
-         </div>
-
+		<footer class="container">
+				<div id="social-icone" class="row text-center">
+	         <ul class="list-inline">
+	            <li>
+	               <a href="#"><i id="socialicone" class="fa fa-facebook-square fa-2x"></i></a>
+	            </li>
+	            <li>
+	               <a href="#"><i id="socialicone" class="fa fa-linkedin-square fa-2x"></i></a>
+	            </li>
+	            <li>
+	               <a href="#"><i id="socialicone" class="fa fa-tumblr-square fa-2x"></i></a>
+	            </li>
+	         </ul>
+	       </div>
+	       <div class="row text-center">
+	             <ul class="menu list-inline">
+	              <li>
+	                 <a id="footer-menu" href="<?= $this->url('default_home') ?>">Accueil</a>
+	               </li>
+	               <li>
+	                  <a id="footer-menu" href="<?= $this->url('default_contact') ?>">Contact</a>
+	               </li>
+	               <li>
+	                 <a id="footer-menu" href="<?= $this->url('games_allgames') ?>">Jeux</a>
+	               </li>
+	             </ul>
+	        </div>
+	 			 <div class="row text-center">
+	 				 <p class="droits-legal" >Find your team © 2017 All rights reserved</p>
+	 			 </div>
 		</footer>
 		<!-- Fin du footer  -->
-	</div>
+
 
 	<script src="<?= $this->assetUrl('node_modules/jquery/dist/jquery.min.js') ?>"></script>
 	<script src="<?= $this->assetUrl('node_modules/jquery-ui/jquery-ui.js') ?>"></script>
 	<script src="<?= $this->assetUrl('node_modules/bootstrap/dist/js/bootstrap.min.js') ?>"></script>
 	<script src="<?= $this->assetUrl('script/login.js') ?>"></script>
 	<script src="<?= $this->assetUrl('script/research.js') ?>"></script>
+
+	<script src="<?= $this->assetUrl('js/arrow.js') ?>"></script>
+	<script type="text/javascript"> $(document).ready(function(){ $('.top').click(function(){ $('html,body').animate({scrollTop: 0},'slow'); }); }); </script>
+
 </body>
 </html>

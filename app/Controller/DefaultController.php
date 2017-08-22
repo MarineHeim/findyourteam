@@ -86,11 +86,11 @@ class DefaultController extends Controller
 	{
 		$this->show('default/players');
 	}
-	public function messagerie()
-	{
-		$this->show('messagerie/envoi');
-
-	}
+	// public function messagerie()
+	// {
+	// 	$this->show('messagerie/envoi');
+	//
+	// }
 
 
 	public function userListApi()

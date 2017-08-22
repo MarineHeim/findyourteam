@@ -2,13 +2,6 @@
 
 <?php $this->start('main_content');?>
 
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Envoyer des messages</title>
-    </head>
-    <body>
         <!-- Mini menu messagerie -->
         <ul class="nav nav-pills" role="tablist">
           <li role="presentation" class="active"><a href="">Envoyer un message</a></li>
@@ -22,21 +15,27 @@
         <form method="POST">
             <div class="form-group">
                 <label for="username">Nom du destinataire:</label>
-                <select class="form-control" name="destinataire">
-                    <option>---</option>
+                <select class="form-control" name="destinataires">
+                    <?php foreach ($destinataires as $destinataire) { ?>
+                    <option><?php echo $destinataire['username'] ?></option>
+                <?php } ?>
+
                 </select>
             </div>
             <div class="form-group">
-                <label for="message">Message:</label>
-                <textarea name="message" id="message" class="form-control" placeholder="Veuillez saisir votre message"></textarea>
+                <label for="titre">Objet:</label>
+                <input type="text" name="titre" class="form-control" placeholder="Objet...">
+            </div>
+            <div class="form-group">
+                <label for="text">Message:</label>
+                <textarea name="text" id="message" class="form-control" placeholder="Veuillez saisir votre message"></textarea>
             </div>
             <br>
             <br>
             <button name="messageForm" class="btn btn-default">Envoyer</button>
+            <?php if (isset($error)) { echo $error; } ?>
         </form>
         <!-- Fin du formulaire d'envoi d'un mail -->
-    </body>
-</html>
 
 
 

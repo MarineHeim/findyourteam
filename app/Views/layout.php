@@ -58,7 +58,7 @@
 						 	</button>
 							  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
 							    <li><a href="<?= $this->url('default_profile') ?>">Mon profil</a></li>
-							    <li><a href="<?= $this->url('default_messagerie') ?>">Ma messagerie</a></li>
+							    <li><a href="<?= $this->url('messagerie_envoi') ?>">Ma messagerie</a></li>
 							    <li><a href="<?= $this->url('default_teams') ?>">Mes teams</a></li>
 							  </ul>
 						</div>

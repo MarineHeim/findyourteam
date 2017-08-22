@@ -12,8 +12,8 @@
 		['GET', '/api/users', 'Default#userListApi', 'profile_user_list'],
 
 
-		['GET|POST', '/profile/[*:username]', 'Default#profile', 'default_profile_view'],
-		['GET|POST', '/profile', 'Default#profile', 'default_profile'],
+		['GET|POST', '/profile/[*:username]', 'Profile#profile', 'profile_profile_view'],
+		['GET|POST', '/profile', 'Profile#profile', 'profile_profile'],
 		['GET|POST', '/teams', 'Default#teams', 'default_teams'],
 		['GET|POST', '/players', 'Default#players', 'default_players'],
 

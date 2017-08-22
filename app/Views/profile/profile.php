@@ -39,18 +39,11 @@
 				<form id="updateprofile" method="post">
 					<div>
 						<label>Choisis ton jeu :</label>
+
 						<select class="form-control" name="jeux" id="jeux">
-						  <option>---</option>
-						  <option>League of Legends</option>
-						  <option>Battlefield 4</option>
-						  <option>Call of duty</option>
-						  <option>CS GO</option>
-						  <option>Diablo 3</option>
-						  <option>Dota 2</option>
-						  <option>Fifa 17</option>
-						  <option>Heroes of the Storm</option>
-						  <option>Overwatch</option>
-						  <option>World of warcarft</option>
+							<?php  foreach ($games as $game) { ?>
+							<option value="<?php echo $game['id'] ?>"><?php echo $game['name'] ?></option>
+							<?php } ?>
 						</select>
 					</div>
 
@@ -58,7 +51,7 @@
 
 					<div>
 						<label>Plateforme :</label>
-						<select class="form-control" name="console" id="console">
+						<select class="form-control" name="plateforme" id="plateforme">
 						  <option>---</option>
 						  <option>PC</option>
 						  <option>PS3</option>
@@ -77,7 +70,7 @@
 
 					<div>
 						<label>Niveau:</label>
-						<select class="form-control" name="niveau">
+						<select class="form-control" name="niveau" id="niveau">
 						  <option>---</option>
 						  <option>Débutant</option>
 						  <option>Intermédiaire</option>
@@ -93,12 +86,6 @@
 
 	<!-- Fin formulaire -->
 
-
-
-
-		<div>
-
-		</div>
 
 	<br>
 

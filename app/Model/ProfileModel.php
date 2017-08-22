@@ -25,9 +25,19 @@ class ProfileModel extends \W\Model\Model
     }
     public function addgameplay($gameplay)
     {
-        $gameplay['jeux'];
-        $gameplay['pseudo'];
-        $query = $this->dbh->query('INSERT INTO `play`(`id_joueur`, `id_game`) VALUES ,[value-2])');
-        return $query->fetchAll();
+        $id_game = $gameplay['jeux'];
+        $id_joueur = $gameplay['pseudo'];
+        $niveau = $gameplay['niveau'];
+        $plateforme = $gameplay['plateforme'];
+
+        $query = $this->dbh->prepare("INSERT INTO play (id_joueur, id_game, niveau, plateforme)
+        VALUES (:id_joueur, :id_game, :niveau, :plateforme)");
+        $query->bindParam(':id_joueur', $id_joueur);
+        $query->bindParam(':id_game', $id_game);
+        $query->bindParam(':niveau', $niveau);
+        $query->bindParam(':plateforme', $plateforme);
+        $query->execute();
+
+        return $query;
     }
 }

@@ -15,8 +15,6 @@
             <br>
             <p><?php echo $game['description'] ?></p>
             <br>
-            <p>Nombre de joueurs : <?php echo $game['nb_player'] ?></p>
-            <p>Nombre de Teams : <?php echo $game['nb_team'] ?></p>
         </div>
         <br>
         <!-- Fin Présentation du jeu -->

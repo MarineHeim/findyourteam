@@ -10,12 +10,12 @@ class GameModel extends \W\Model\Model
 
     public function findAllGame()
     {
-        $query = $this->dbh->query('SELECT `id`, `name`, `description`, `picture`, `nb_player`, `nb_team` FROM games');
+        $query = $this->dbh->query('SELECT `id`, `name`, `description`, `picture` FROM games');
         return $query->fetchAll();
     }
     public function GetGameById($id)
     {
-        $query = $this->dbh->query('SELECT id, name, description, picture, nb_player, nb_team FROM games WHERE id="' . $id . '"');
+        $query = $this->dbh->query('SELECT id, name, description, picture FROM games WHERE id="' . $id . '"');
         return $query->fetchAll();
     }
 }

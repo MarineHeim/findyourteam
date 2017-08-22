@@ -33,4 +33,11 @@ class MessagerieController extends Controller
 
     }
 
+    public function recu()
+    {
+        $messagesreçus_manager = new \Model\MessagerieModel();
+        $messagesrecus = $messagesreçus_manager->SeeAllMessage();
+        $this->show('/messagerie/recu', ['messageresrecus' => $messagesrecus]);
+    }
+
 }

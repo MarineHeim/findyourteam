@@ -5,7 +5,7 @@
 <!-- Image /animé -->
 
 	<div class="">
-		<img src="<?= $this->assetUrl('animation/animationfyt.svg') ?>" alt="">
+		<img class="animationfyt" src="<?= $this->assetUrl('animation/animationfyt.svg') ?>" alt="">
 	</div>
 
 

@@ -1,6 +1,12 @@
 <?php $this->layout('layout', ['title' => 'Profil']) ?>
 
 <?php $this->start('main_content') ?>
+	<div class="navigation">
+		<ul>
+			<li class="<?= ($w_current_route === 'profile_profile') ? 'active' : ''; ?>"><a href="<?= $this->url('profile_profile') ?>">Modifier Profil</a></li>
+			<li class="<?= ($w_current_route === 'profile_profileview') ? 'active' : ''; ?>"><a href="<?= $this->url('profile_profile_view', ['id' => $user['id']]) ?>">Voir Profile</a></li>
+		</ul>
+	</div>
 	<!-- Accueil utilisateur -->
 	<h2 class="text-center">Bonjour <?php echo $w_user['username']?></h2>
 	<!-- Fin Accueil utilisateur -->

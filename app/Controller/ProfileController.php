@@ -19,7 +19,7 @@ class ProfileController extends Controller
                 $id_joueur = $_POST['pseudo'];
                 $niveau = $_POST['niveau'];
                 $user_manager = new \Model\ProfileModel();
-                var_dump($_POST);
+
                 if (strlen($id_joueur) < 3) {
                     $errors['pseudo'] = 'Le pseudo est trop court.';
                 }
@@ -39,6 +39,17 @@ class ProfileController extends Controller
                     ]);
                 }
             }
+
+
+            $description = null;
+            if (isset($_POST['updatedescription'])) {
+                $description = $_POST['description'];
+                $user_manager = new \Model\UserModel();
+                $user = $this->getUser();
+                $desc = $user_manager->update(['description' => $description], $user['id']);
+            }
+
+
 
             $game_manager = new \Model\GameModel();
             // On récupére tout les jeux

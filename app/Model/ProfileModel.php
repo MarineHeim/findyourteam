@@ -23,6 +23,17 @@ class ProfileModel extends \W\Model\Model
         $query = $this->dbh->query('SELECT * FROM users');
         return $query->fetchAll();
     }
+    // public function adddescription($desc)
+    // {
+    //     $descriptions = $description['description'];
+    //     $query = $this->dbh->prepare("UPDATE users
+    //     SET description = $descriptions
+    //     WHERE id="' . $id . '"");
+    //     $query->bindParam(':description', $description);
+    //     $query->execute();
+    //     return $query;
+    // }
+    
     public function addgameplay($gameplay)
     {
         $id_game = $gameplay['jeux'];

@@ -28,10 +28,9 @@
 
 				<div class="">
 					<h3>Ta présentation :</h3>
-					<form method="post">
-					<label></label>
-					<textarea class="form-control" rows="8" cols="100"></textarea><br>
-					<button class="btn btn-default" type="submit" name="button">Ajouter/modifier description</button>
+					<form id="updatedescription" method="post">
+					<textarea class="form-control" rows="8" cols="100" name="description" id="description"></textarea><br>
+					<button class="btn btn-default" name="updatedescription" id="updatedescription">Ajouter/modifier description</button>
 					</form>
 				</div>
 			</div>

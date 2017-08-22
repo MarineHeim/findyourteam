@@ -12,12 +12,15 @@
 		['GET', '/api/users', 'Default#userListApi', 'profile_user_list'],
 
 
-		['GET|POST', '/profile/[*:username]', 'Default#profile', 'default_profile_view'],
-		['GET|POST', '/profile', 'Default#profile', 'default_profile'],
+		['GET|POST', '/profile/[i:id]', 'Profile#profileview', 'profile_profile_view'],
+		['GET|POST', '/profile', 'Profile#profile', 'profile_profile'],
 		['GET|POST', '/teams', 'Default#teams', 'default_teams'],
 		['GET|POST', '/players', 'Default#players', 'default_players'],
 
-		['GET|POST', '/messagerie', 'Default#messagerie', 'default_messagerie'],
+		['GET|POST', '/messagerie', 'Messagerie#envoi', 'messagerie_envoi'],
+		['GET|POST', '/messagerie/recu', 'Messagerie#recu', 'messagerie_recu'],
+		['GET|POST', '/messagerie/lecture', 'Messageriet#lecture', 'messagerie_lecture'],
+		['GET|POST', '/messagerie/delete', 'Messagerie#delete', 'messagerie_delete'],
 
 		['GET', '/jeux', 'Games#allgames', 'games_allgames'],
 

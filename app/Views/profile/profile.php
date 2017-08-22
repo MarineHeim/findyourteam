@@ -1,6 +1,12 @@
 <?php $this->layout('layout', ['title' => 'Profil']) ?>
 
 <?php $this->start('main_content') ?>
+	<div class="navigation">
+		<ul>
+			<li class="<?= ($w_current_route === 'profile_profile') ? 'active' : ''; ?>"><a href="<?= $this->url('profile_profile') ?>">Modifier Profil</a></li>
+			<li class="<?= ($w_current_route === 'profile_profileview') ? 'active' : ''; ?>"><a href="<?= $this->url('profile_profile_view', ['id' => $user['id']]) ?>">Voir Profile</a></li>
+		</ul>
+	</div>
 	<!-- Accueil utilisateur -->
 	<h2 class="text-center">Bonjour <?php echo $w_user['username']?></h2>
 	<!-- Fin Accueil utilisateur -->
@@ -11,27 +17,19 @@
 
 		<div class="row">
 			<div class="col-md-8">
-				<div class="media">
-					<h3>Tes jeux :</h3>
-				  	<div class="media-left">
-				    	<a href="#">
-				      	<img class="media-object" src="..." alt="...">
-					    </a>
-					</div>
-					<div class="media-body">
-					    <h4 class="media-heading">Media heading</h4>
-					    ...
-					</div>
+				<div class="Avatar">
+					<form id="updateavatar"method="post" enctype="multipart/form-data">
+						<label>Avatar</label>
+						<input class="btn btn-default" type="file" name="avatar" id="avatar" value="">
+						<button class="btn btn-default" name="updateavatar" id="updateavatar">Ajouter/modifier description</button>
+					</form>
 				</div>
-
-				<br>
 
 				<div class="">
 					<h3>Ta présentation :</h3>
-					<form method="post">
-					<label></label>
-					<textarea class="form-control" rows="8" cols="100"></textarea><br>
-					<button class="btn btn-default" type="submit" name="button">Ajouter/modifier description</button>
+					<form id="updatedescription" method="post">
+					<textarea class="form-control" rows="8" cols="100" name="description" id="description"></textarea><br>
+					<button class="btn btn-default" name="updatedescription" id="updatedescription">Ajouter/modifier description</button>
 					</form>
 				</div>
 			</div>
@@ -39,18 +37,11 @@
 				<form id="updateprofile" method="post">
 					<div>
 						<label>Choisis ton jeu :</label>
+
 						<select class="form-control" name="jeux" id="jeux">
-						  <option>---</option>
-						  <option>League of Legends</option>
-						  <option>Battlefield 4</option>
-						  <option>Call of duty</option>
-						  <option>CS GO</option>
-						  <option>Diablo 3</option>
-						  <option>Dota 2</option>
-						  <option>Fifa 17</option>
-						  <option>Heroes of the Storm</option>
-						  <option>Overwatch</option>
-						  <option>World of warcarft</option>
+							<?php  foreach ($games as $game) { ?>
+							<option value="<?php echo $game['id'] ?>"><?php echo $game['name'] ?></option>
+							<?php } ?>
 						</select>
 					</div>
 
@@ -58,7 +49,7 @@
 
 					<div>
 						<label>Plateforme :</label>
-						<select class="form-control" name="console" id="console">
+						<select class="form-control" name="plateforme" id="plateforme">
 						  <option>---</option>
 						  <option>PC</option>
 						  <option>PS3</option>
@@ -77,7 +68,7 @@
 
 					<div>
 						<label>Niveau:</label>
-						<select class="form-control" name="niveau">
+						<select class="form-control" name="niveau" id="niveau">
 						  <option>---</option>
 						  <option>Débutant</option>
 						  <option>Intermédiaire</option>
@@ -93,12 +84,6 @@
 
 	<!-- Fin formulaire -->
 
-
-
-
-		<div>
-
-		</div>
 
 	<br>
 

@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/style.css') ?>">
 	<link rel="icon" type="image/png" href="<?= $this->assetUrl('img/favicon.png') ?>">
 	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Quicksand" />
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600" rel="stylesheet">
 
 
 
@@ -104,12 +105,13 @@
 
 		<!-- Arrow-top -->
 		<div class="container">
-				<a href="#"><i id="arrow-top" title="Retour en haut" class="fa fa-arrow-circle-up fa-3x"></i></a>		</div>
+				<a href="#"><i id="arrow-top" title="Retour en haut" class="fa fa-arrow-circle-up fa-3x"></i></a>
+		</div>
 
 		<!-- Arrow-top -->
 		<!-- Footer  -->
-		<footer class="container">
-				<div id="social-icone" class="row text-center">
+		<footer class="">
+				<div id="social-icone" class="">
 	         <ul class="list-inline">
 	            <li>
 	               <a href="#"><i id="socialicone" class="fa fa-facebook-square fa-2x"></i></a>
@@ -122,7 +124,7 @@
 	            </li>
 	         </ul>
 	       </div>
-	       <div class="row text-center">
+	       <div class="">
 	             <ul class="menu list-inline">
 	              <li>
 	                 <a id="footer-menu" href="<?= $this->url('default_home') ?>">Accueil</a>
@@ -135,7 +137,7 @@
 	               </li>
 	             </ul>
 	        </div>
-	 			 <div class="row text-center">
+	 			 <div class="">
 	 				 <p class="droits-legal" >Find your team © 2017 All rights reserved</p>
 	 			 </div>
 		</footer>
@@ -145,11 +147,12 @@
 	<script src="<?= $this->assetUrl('node_modules/jquery/dist/jquery.min.js') ?>"></script>
 	<script src="<?= $this->assetUrl('node_modules/jquery-ui/jquery-ui.js') ?>"></script>
 	<script src="<?= $this->assetUrl('node_modules/bootstrap/dist/js/bootstrap.min.js') ?>"></script>
+	<script src="<?= $this->assetUrl('anime-master/anime.min.js') ?>"></script>
 	<script src="<?= $this->assetUrl('script/login.js') ?>"></script>
 	<script src="<?= $this->assetUrl('script/research.js') ?>"></script>
-
 	<script src="<?= $this->assetUrl('js/arrow.js') ?>"></script>
-	<script type="text/javascript"> $(document).ready(function(){ $('.top').click(function(){ $('html,body').animate({scrollTop: 0},'slow'); }); }); </script>
+	<script src="<?= $this->assetUrl('js/bouton-contact.js') ?>"></script>
+
 
 </body>
 </html>

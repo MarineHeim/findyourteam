@@ -14,10 +14,10 @@
                    <p id="description" class="text-justify"><?php echo $game['description'] ?></p>
                    <p><a href="<?= $this->url('games_onegame', ['id' => $game['id']]); ?>" class="btn btn-primary" role="button">Voir jeu</a> </p> <br><br><br>
                 </div>
+              </center>
                </div>
            <?php } ?>
        </div>
    </div>
-</center>
 
 <?php $this->stop('main_content'); ?>

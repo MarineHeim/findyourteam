@@ -1,10 +1,14 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,700,500);
 
+* {
+    position: relative;
+}
 /* Header */
 
 /* Body */
 body {
   background:#F7F7F7;
+  /*position: relative;*/
   color:#FFFFFF;
   font-family: 'Quicksand', sans-serif;
   font-weight:500;
@@ -27,11 +31,14 @@ html {
     font-style: normal;
     font-variant: normal;
     font-weight: bold;
+    height: 90px;
+
 }
 
 .navbar-brand {
-    padding: 0;
-    margin: 5px;
+    margin: auto;
+    padding-top: 10px;
+    display: block;
 }
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
@@ -39,18 +46,44 @@ html {
 }
 
 .navbar-default .navbar-nav>li>a {
-    color: white;
+    color: #FFFFFF;
+    margin: auto;
+    padding-top: 30px;
 }
 
 .dropdown {
-    margin-top: 8px;
+    /*margin-top: 8px;*/
+    margin: auto;
+    padding-top: 25px;
 }
+
+.search {
+    padding-top: 15px;
+}
+
+#accueil_contact:hover {
+    background-color : #B2EBF2;
+    height: 90px;
+    color: #FFFFFF;
+}
+#accueil_jeux:hover {
+    background-color : #0097A7;
+    height: 90px;
+    color: #FFFFFF;
+}
+#accueil_profil:hover {
+    background-color : #97DFC6;
+    height: 90px;
+    color: #FFFFFF;
+}
+
 
 #sign {
   color :#FFFFFF;
   background-color : #FF5252;
   font-weight: bold;
   letter-spacing: 0.071em;
+  margin-top: 15px;
 }
 
 #sign:hover{
@@ -61,6 +94,7 @@ html {
 #go{
   color :#FF5252;
   font-weight: bold;
+
 }
 #go:hover{
   background-color : #FF5252;
@@ -374,6 +408,68 @@ h1{
   color:#FF5252;
   opacity:1;
 }
+
+/* PROFIL*/
+
+.modifier_profil, .voir_profil {
+    color : #0097A7;
+    background-color:#B2EBF2;
+    border: none;
+}
+
+.modifier_profil:hover, .voir_profil:hover {
+    color : #B2EBF2;
+    background-color:#0097A7;
+    border: none;
+}
+
+.modifier_photo, .modifier_description, .ajouter_jeu {
+    color : #FFFFFF;
+    background-color:#FF5252;
+    border: none;
+}
+
+.modifier_photo:hover, .modifier_description:hover, .ajouter_jeu:hover {
+    color : #FF5252;
+    background-color:#FFFFFF;
+    border: none;
+}
+/* FIN PROFIL*/
+
+/* MESSAGERIE */
+
+
+
+/* FIN MESSAGERIE */
+
+/* TEAMS */
+.create_team {
+    color : #FFFFFF;
+    background-color:#FF5252;
+    border: none;
+     font-size: 1.5em;
+}
+
+.create_team:hover {
+    color : #FF5252;
+    background-color:#FFFFFF;
+    border: none;
+    font-size: 1.5em;
+}
+
+#updatecreateteam {
+    color : #FFFFFF;
+    background-color:#FF5252;
+    border: none;
+     font-size: 1.3em;
+}
+
+.formcontrol_team {
+
+}
+
+
+/* FIN TEAMS */
 
 /* Footer */
 footer {

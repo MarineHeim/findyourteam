@@ -42,16 +42,16 @@
 						// Avec ternaire
 						($w_current_route === 'default_home') ? 'active' : ''; // "?" correspond au if et le ":" au else
 						?>
-						<li class="<?= ($w_current_route === 'default_home') ? 'active' : ''; ?>"><a href="<?= $this->url('default_home') ?>"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
-						<li class="<?= ($w_current_route === 'default_contact') ? 'active' : ''; ?>"><a href="<?= $this->url('default_contact') ?>">Contact</a></li>
-						<li class="<?= ($w_current_route === 'games_allgames') ? 'active' : ''; ?>"><a href="<?= $this->url('games_allgames') ?>">Jeux</a></li>
-						<li class="<?= ($w_current_route === 'profile_profile') ? 'active' : ''; ?>"><a href="<?= $this->url('profile_profile') ?>">Profile</a></li>
+						<li class="<?= ($w_current_route === 'default_home') ? 'active' : ''; ?>"><a href="<?= $this->url('default_home') ?>"><span class="glyphicon glyphicon-home" aria-hidden="true" id="accueil_home"></span></a></li>
+						<li class="<?= ($w_current_route === 'default_contact') ? 'active' : ''; ?>"><a href="<?= $this->url('default_contact') ?>" id="accueil_contact">Contact</a></li>
+						<li class="<?= ($w_current_route === 'games_allgames') ? 'active' : ''; ?>"><a href="<?= $this->url('games_allgames') ?>" id="accueil_jeux">Jeux</a></li>
+						<li class="<?= ($w_current_route === 'profile_profile') ? 'active' : ''; ?>"><a href="<?= $this->url('profile_profile') ?>" id="accueil_profil">Profil</a></li>
 					</ul>
 
 
 
 					<?php if ($w_user) { ?>
-						<p class="navbar-text navbar-right"><a class="navbar-link" href="<?= $this->url('profile_profile') ?>"><?php echo $w_user['username']; ?></a></p>
+						<!-- <p class="navbar-text navbar-right"><a class="navbar-link" href="<?= $this->url('profile_profile') ?>"><?php echo $w_user['username']; ?></a></p> -->
 						<div class="dropdown navbar-right">
   							<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
     							<?php echo $w_user['username']; ?>
@@ -60,7 +60,7 @@
 							  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
 							    <li><a href="<?= $this->url('profile_profile') ?>">Mon profil</a></li>
 							    <li><a href="<?= $this->url('messagerie_envoi') ?>">Ma messagerie</a></li>
-							    <li><a href="<?= $this->url('default_teams') ?>">Mes teams</a></li>
+							    <li><a href="<?= $this->url('teams_teams') ?>">Mes teams</a></li>
 							  </ul>
 						</div>
 						<ul class="nav navbar-nav navbar-right">
@@ -76,8 +76,9 @@
 					<form class="navbar-form navbar-right">
         				<div class="form-group search">
           					<input id="research" type="text" class="form-control" value="" placeholder="Recherche...">
-        				</div>
+
         					<button id="go" type="submit" class="btn btn-default">GO !</button>
+							</div>
       				</form>
 				</div>
 			</div>
@@ -104,11 +105,14 @@
 
 		<!-- Arrow-top -->
 		<div class="container">
-				<a href="#"><i id="arrow-top" title="Retour en haut" class="fa fa-arrow-circle-up fa-3x"></i></a>		</div>
+				<a href="#">
+					<i id="arrow-top" title="Retour en haut" class="fa fa-arrow-circle-up fa-3x"></i>
+				</a>
+		</div>
 
 		<!-- Arrow-top -->
 		<!-- Footer  -->
-		<footer class="container">
+		<!-- <footer class="container">
 				<div id="social-icone" class="row text-center">
 	         <ul class="list-inline">
 	            <li>
@@ -138,7 +142,7 @@
 	 			 <div class="row text-center">
 	 				 <p class="droits-legal" >Find your team © 2017 All rights reserved</p>
 	 			 </div>
-		</footer>
+		</footer> -->
 		<!-- Fin du footer  -->
 
 

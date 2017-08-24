@@ -1,39 +1,47 @@
 <?php $this->layout('layout', ['title' => 'Profil']) ?>
 
 <?php $this->start('main_content') ?>
-	<div class="navigation">
-		<ul>
-			<li class="<?= ($w_current_route === 'profile_profile') ? 'active' : ''; ?>"><a href="<?= $this->url('profile_profile') ?>">Modifier Profil</a></li>
-			<li class="<?= ($w_current_route === 'profile_profileview') ? 'active' : ''; ?>"><a href="<?= $this->url('profile_profile_view', ['id' => $user['id']]) ?>">Voir Profile</a></li>
-		</ul>
-	</div>
+
 	<!-- Accueil utilisateur -->
 	<h2 class="text-center">Bonjour <?php echo $w_user['username']?></h2>
+	<br><br>
 	<!-- Fin Accueil utilisateur -->
+
+	<div class="navigation">
+		<!-- <ul>
+			<li class="<?= ($w_current_route === 'profile_profile') ? 'active' : ''; ?>"><a href="<?= $this->url('profile_profile') ?>">Modifier Profil</a></li>
+			<li class="<?= ($w_current_route === 'profile_profileview') ? 'active' : ''; ?>"><a href="<?= $this->url('profile_profile_view', ['id' => $user['id']]) ?>">Voir Profil</a></li>
+		</ul> -->
+		<a href="<?= $this->url('profile_profile') ?>"><button class="btn  modifier_profil <?= ($w_current_route === 'profile_profile') ? 'active' : ''; ?>" type="button" name="modifier_profil">Modifier profil</button></a>
+		<a href="<?= $this->url('profile_profile_view', ['id' => $user['id']]) ?>"><button class="btn btn-default voir_profil <?= ($w_current_route === 'profile_profileview') ? 'active' : ''; ?>" type="button" name="modifier_profil">Voir profil</button></a>
+	</div>
+
 
 	<br>
 
 	<!-- Formulaire pour ajouter un jeu a son profil -->
 
 		<div class="row">
-			<div class="col-md-8">
+			<div class="col-md-6">
 				<div class="Avatar">
 					<form id="updateavatar"method="post" enctype="multipart/form-data">
-						<label>Avatar</label>
-						<input class="btn btn-default" type="file" name="avatar" id="avatar" value="">
-						<button class="btn btn-default" name="updateavatar" id="updateavatar">Ajouter/modifier description</button>
+						<img src="<?= $this->assetUrl('img/avatar.png') ?>" alt="">
+						<br> <br>
+						<input class="btn btn-default " type="file" name="avatar" id="avatar" value=""><br>
+						<button class="btn btn-default modifier_photo" name="updateavatar" id="updateavatar">Ajouter/modifier la photo</button>
 					</form>
 				</div>
+
 
 				<div class="">
 					<h3>Ta présentation :</h3>
 					<form id="updatedescription" method="post">
 					<textarea class="form-control" rows="8" cols="100" name="description" id="description"></textarea><br>
-					<button class="btn btn-default" name="updatedescription" id="updatedescription">Ajouter/modifier description</button>
+					<button class="btn btn-default modifier_description" name="updatedescription" id="updatedescription">Ajouter/modifier description</button>
 					</form>
 				</div>
 			</div>
-			<div class="col-md-4">
+			<div class="col-md-6">
 				<form id="updateprofile" method="post">
 					<div>
 						<label>Choisis ton jeu :</label>
@@ -77,7 +85,7 @@
 					  	</select>
 				  	</div>
 					<br>
-					<button class="btn btn-default" id="updateprofile" name="updateprofile">Ajouter le jeu a mon profil</button>
+					<button class="btn btn-default ajouter_jeu" id="updateprofile" name="updateprofile">Ajouter le jeu a mon profil</button>
 				</form>
 			</div>
 		</div>

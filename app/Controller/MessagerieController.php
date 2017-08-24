@@ -9,7 +9,11 @@ class MessagerieController extends Controller
     public function envoi()
     {
         $destinataires_manager = new \Model\UserModel();
-        $message_manager = new \Model\MessagerieModel();
+        $messages_manager = new \Model\MessagerieModel();
+
+        $messagesenvoyes = $messages_manager->SeeSendMessage($this->getUser()['username']);
+
+        $messagesrecus = $messages_manager->SeeAllMessage($this->getUser()['username']);
 
         $destinataires = $destinataires_manager->findAll();
 
@@ -17,7 +21,7 @@ class MessagerieController extends Controller
                 $destinataires = $_POST['destinataires'];
                 $titre = $_POST['titre'];
                 $text = $_POST['text'];
-                $message = $message_manager->insert([
+                $message = $messages_manager->insert([
                     'expediteur' => $this->getUser()['username'],
                     'destinataire' => $destinataires,
                     'titre' => $titre,
@@ -29,15 +33,54 @@ class MessagerieController extends Controller
                 $this->redirectToRoute('messagerie_envoi');
 
         }
-    	$this->show('messagerie/envoi', ['destinataires' => $destinataires]);
+    	$this->show('messagerie/envoi', ['destinataires' => $destinataires,
+                                        'messagesrecus' => $messagesrecus,
+                                        'messagesenvoyes' => $messagesenvoyes]);
 
     }
 
     public function recu()
     {
-        $messagesreçus_manager = new \Model\MessagerieModel();
-        $messagesrecus = $messagesreçus_manager->SeeAllMessage();
-        $this->show('/messagerie/recu', ['messageresrecus' => $messagesrecus]);
+        $messages_manager = new \Model\MessagerieModel();
+
+        $messagesenvoyes = $messages_manager->SeeSendMessage($this->getUser()['username']);
+        $messagerecu = $messages_manager->findAllMessage();
+
+
+        $messagesrecus = $messages_manager->SeeAllMessage($this->getUser()['username']);
+        if (!$messagesrecus) {
+            echo 'Vous n\'avez aucun message.';
+        }
+        $this->show('/messagerie/recu', ['messagesrecus' => $messagesrecus,
+                                        'messagesenvoyes' => $messagesenvoyes]);
     }
+
+    public function envoye()
+    {
+        $messages_manager = new \Model\MessagerieModel();
+
+        $messagesrecus = $messages_manager->SeeAllMessage($this->getUser()['username']);
+
+
+        $messagesenvoyes = $messages_manager->SeeSendMessage($this->getUser()['username']);
+        if (!$messagesenvoyes) {
+            echo 'Vous n\'avez aucun message envoyé.';
+        }
+
+        $this->show('/messagerie/envoye', ['messagesenvoyes' => $messagesenvoyes,
+                                          'messagesrecus' => $messagesrecus]);
+    }
+
+    public function lecture($id)
+    {
+        $messages_manager = new \Model\MessagerieModel();
+
+        $messagelecture = $messages_manager->ReadMessage($id);
+
+
+
+        $this->show('/messagerie/lecture', ['messagelecture' => $messagelecture]);
+    }
+
 
 }

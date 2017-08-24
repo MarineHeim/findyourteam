@@ -34,8 +34,9 @@
 		// Pages de la messagerie interne
 		['GET|POST', '/messagerie', 'Messagerie#envoi', 'messagerie_envoi'],
 		['GET|POST', '/messagerie/recu', 'Messagerie#recu', 'messagerie_recu'],
-		['GET|POST', '/messagerie/lecture', 'Messageriet#lecture', 'messagerie_lecture'],
+		['GET|POST', '/messagerie/envoye', 'Messagerie#envoye', 'messagerie_envoye'],
 		['GET|POST', '/messagerie/delete', 'Messagerie#delete', 'messagerie_delete'],
+		['GET', 	 '/messagerie/lecture/[i:id]', 'Messagerie#lecture', 'messagerie_lecture'],
 		// Fin des pages de la messagerie interne
 
 		// Pages des jeux

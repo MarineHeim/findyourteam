@@ -92,7 +92,7 @@
 	<!--Titre des pages  -->
 	<div class="container">
 		<?php if($title != 'Accueil'){; ?>
-			<h1 class=text-center><?php echo $title?></h1>
+			<h1 class="text-center animated shake"><?php echo $title?></h1>
 		<?php } ?>
 
 	<!--Fin titre des pages  -->
@@ -142,7 +142,7 @@
 	 			 <div class="">
 	 				 <p class="droits-legal" >Find your team © 2017 All rights reserved</p>
 	 			 </div>
-		</footer> -->
+		</footer>
 		<!-- Fin du footer  -->
 
 

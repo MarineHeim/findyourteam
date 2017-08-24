@@ -23,32 +23,18 @@ class ProfileModel extends \W\Model\Model
         $query = $this->dbh->query('SELECT * FROM users');
         return $query->fetchAll();
     }
-    // public function adddescription($desc)
-    // {
-    //     $descriptions = $description['description'];
-    //     $query = $this->dbh->prepare("UPDATE users
-    //     SET description = $descriptions
-    //     WHERE id="' . $id . '"");
-    //     $query->bindParam(':description', $description);
-    //     $query->execute();
-    //     return $query;
-    // }
-    
+
     public function addgameplay($gameplay)
     {
-        $id_game = $gameplay['jeux'];
-        $id_joueur = $gameplay['pseudo'];
-        $niveau = $gameplay['niveau'];
-        $plateforme = $gameplay['plateforme'];
-
-        $query = $this->dbh->prepare("INSERT INTO play (id_joueur, id_game, niveau, plateforme)
-        VALUES (:id_joueur, :id_game, :niveau, :plateforme)");
-        $query->bindParam(':id_joueur', $id_joueur);
-        $query->bindParam(':id_game', $id_game);
-        $query->bindParam(':niveau', $niveau);
-        $query->bindParam(':plateforme', $plateforme);
+        $query = $this->dbh->prepare("INSERT INTO play (id_joueur, id_game, plateforme, niveau, pseudo)
+        VALUES (:id_joueur, :id_game, :plateforme, :niveau, :pseudo)");
+        $query->bindValue(':id_joueur', $gameplay['id_joueur']);
+        $query->bindValue(':id_game', $gameplay['id_game']);
+        $query->bindValue(':plateforme', $gameplay['plateforme']);
+        $query->bindValue(':niveau', $gameplay['niveau']);
+        $query->bindValue(':pseudo', $gameplay['pseudo']);
         $query->execute();
 
-        return $query;
+        return $this->lastInsertId();
     }
 }

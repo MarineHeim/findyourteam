@@ -26,8 +26,14 @@ class GamesController extends Controller
 
     public function onegame($id)
     {
+        $user = $this->getUser();
         $game_manager = new \Model\GameModel();
         $onegame = $game_manager->GetGameById($id);
-        $this->show('/games/onegame', ['onegame' => $onegame]);
+        $userongame =$game_manager->GetPlayerByGame($onegame[0]['id'], $user['id']);
+
+
+        $this->show('/games/onegame', ['onegame' => $onegame, 'userongame' => $userongame]);
     }
+
+
 }

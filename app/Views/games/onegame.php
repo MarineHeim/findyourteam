@@ -18,16 +18,22 @@
         </div>
         <br>
         <!-- Fin Présentation du jeu -->
-
+        <?php } ?>
 
         <!-- Les derniers joueurs inscrits  -->
         <div class="col-md-6">
             <h4>Derniers joueurs inscrits</h4>
             <hr>
+            <?php  foreach ($userongame as $userongames) { ?>
+            <h3><?php echo $userongames['username'] ?></h3>
+            <img class="img-responsive" src="<?= $this->assetUrl('img/avatars/' . $userongames['avatar']) ?>" alt="...">
             <p>est disponible pour jouer</p>
             <hr>
+            <?php } ?>
             <button class="btn btn-primary" name="seeGamers">Voir tous les joueurs</button>
+
         </div>
+
         <!-- Fin les derniers joueurs inscrits  -->
 
         <!-- Les dernières teams inscrites  -->
@@ -42,8 +48,5 @@
     </div>
 </div>
   </center>
-<?php }
-
-?>
 
 <?php $this->stop('main_content'); ?>

@@ -11,32 +11,36 @@ class ProfileController extends Controller
         $user = $this->getUser(); // Récupére l'utilisateur connecté
             $errors = [];
             $id_game = null;
-            $plateforme = null;
             $id_joueur = null;
+            $plateforme = null;
             $niveau = null;
+            $pseudo = null;
+
             if (isset($_POST['updateprofile'])) { // Vérifie que le formulaire updateprofile est posté
                 $id_game = $_POST['jeux'];
+                $id_joueur = $user['id'];
                 $plateforme = $_POST['plateforme'];
-                $id_joueur = $_POST['pseudo'];
                 $niveau = $_POST['niveau'];
+                $pseudo = $_POST['pseudo'];
                 $user_manager = new \Model\ProfileModel();
 
-                if (strlen($id_joueur) < 3) {
+                /*if (strlen($id_joueur) < 3) {
                     $errors['pseudo'] = 'Le pseudo est trop court.';
-                }
+                }*/
 
-                if (strlen($id_joueur) > 30) {
+                /*if (strlen($id_joueur) > 30) {
                     $errors['pseudo'] = 'Le pseudo est trop long.';
-                }
+                }*/
 
                 if (empty($errors)) {
 
                     // On ajoute un jeu
                     $gameplay = $user_manager->addgameplay([
-                        'jeux' => $id_game,
-                        'pseudo' => $id_joueur,
+                        'id_game' => $id_game,
+                        'id_joueur' => $id_joueur,
                         'niveau' => $niveau,
-                        'plateforme' => $plateforme
+                        'plateforme' => $plateforme,
+                        'pseudo' => $pseudo
                     ]);
                 }
             }
@@ -81,9 +85,15 @@ class ProfileController extends Controller
     }
 
     public function profileView($username){
+
         $user = $this->getUser(); // Récupére l'utilisateur connecté
+
+        $usergame_manager = new \Model\UserModel();
+        $usergame = $usergame_manager->findAllGameByUser($user['id']); // Récupére les jeux de l'utilisateur
+
         $user_manager = new \Model\UserModel();
         $oneprofile = $user_manager->findAllUser($user['id']);
-        $this->show('/profile/profileview', ['user' => $user, 'oneprofile' => $oneprofile]);
+
+        $this->show('/profile/profileview', ['user' => $user, 'oneprofile' => $oneprofile, 'usergame' => $usergame]);
     }
 }

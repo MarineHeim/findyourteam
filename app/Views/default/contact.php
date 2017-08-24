@@ -8,9 +8,9 @@
 <p id="txt-contact" class="text-center">N'hésitez pas à nous contacter pour toute demande, nous vous répondrons dans les plus brefs délais.</p>
 <br>
     <!-- Formulaire de contact -->
-    <form method="POST">
+    <form id="form" method="POST">
         <div class="form-group">
-            <label class="mail" for="mail">Mail :</label>
+            <label class="mail" for="mail" placeholder="monemail@maboitemail.com">Email :</label>
             <input type="mail" name="mail" id="mail" class="form-control">
         </div>
         <div class="form-group">
@@ -19,11 +19,10 @@
         </div>
           <br>
           <br>
-        <center>
-
-          <main class="">
-            <div class="button animate">
-              <div id="btn-contact" name="contactForm" class="text">Envoyer</div>
+        <div class="text-center" >
+          <main class="container">
+            <div id="btn-contact" name="contactForm" class="button animate">
+              <div   class="text-envoyer">Envoyer</div>
             </div>
             <div class="progress-bar"></div>
             <svg x="0px" y="0px"
@@ -31,8 +30,7 @@
               <path class="check" class="st0" d="M2,19.2C5.9,23.6,9.4,28,9.4,28L23,2"/>
             </svg>
           </main>
-          <!-- <button id="btn-contact" name="contactForm" class="btn btn-default">Envoyer</button> -->
-        </center>
+        </div>
     </form>
     <!-- Fin du formulaire de contact -->
 <?php $this->stop('main_content'); ?>

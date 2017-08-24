@@ -17,24 +17,36 @@ class DefaultController extends Controller
 
 	public function contact()
 	{
+		$email = null;
+		$message= null;
 		if(isset($_POST['contactForm'])) {
 		$email = $_POST['mail'];
 		$message = $_POST['message'];
 
-		    $mailDestinataire="marine.heim@outlook.com";
+		$send = true;
+
+		if (empty($email)) {
+		$send = false;
+		setFlashbag("Attention", "Veuillez renseigner une adresse email.");
+	}
+	elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+		setFlashbag("Attention", "Veuillez renseigner une adresse email valide.");
+
+	}
+		 }
+		  $mailDestinataire="poulainmaud@gmail.com";
 
 			$from = "From: <".$email.">";
 
-			$messageMail = "
-		            Formulaire de contact:
-
-		            Email :   ".$email."
-					Message :   ".$message."";
+			$messageMail = "Formulaire de contact:
+		      						Email :   ".$email."
+											Message :   ".$message."";
 
 			mail($mailDestinataire, $messageMail, $from, $message);
 
-		$this->flash('Votre message a bien été envoyé.', 'success');
-		}
+						if (!empty($_POST)) {
+						$this->showJson(['success'=>'Votre message a bien été envoyé.']);
+						}
 
 		$this->show('default/contact');
 	}

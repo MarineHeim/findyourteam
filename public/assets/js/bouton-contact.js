@@ -13,23 +13,23 @@ for (var i = 0; i < pathEls.length; i++) {
 
 basicTimeline
   .add({
-    targets: ".text",
+    targets: ".text-envoyer",
     duration: 1,
     opacity: "0"
   })
   .add({
     targets: ".button",
-    duration: 1300,
+    duration: 1200,
     height: 20,
     width: 300,
-    backgroundColor: "#FF5252;",
+    backgroundColor: "#FF5252",
     border: "0",
     borderRadius: 100
   })
   .add({
     targets: ".progress-bar",
     duration: 2000,
-    width: 300,
+    width: 650,
     easing: "linear"
   })
   .add({
@@ -42,9 +42,9 @@ basicTimeline
     width: 80,
     height: 80,
     delay: 500,
-    duration: 750,
+    duration: 400,
     borderRadius: 80,
-    backgroundColor: "#FF5252;"
+    backgroundColor: "#ffffff",
   })
   .add({
     targets: pathEl,
@@ -55,8 +55,21 @@ basicTimeline
 
 $(".button").click(function() {
   basicTimeline.play();
+  $.ajax({
+     url : '/findyourteam/public/contact', // La ressource ciblée
+     type : 'POST', // Le type de la requête HTTP.
+     data :  $('#form').serialize()
+   }).done(function( data ) {
+      console.log(data);
+  });
+
 });
 
-$(".text").click(function() {
+$(".text-envoyer").click(function() {
   basicTimeline.play();
+  $.ajax({
+     url : '/findyourteam/public/contact', // La ressource ciblée
+     type : 'POST' // Le type de la requête HTTP.
+  });
+
 });

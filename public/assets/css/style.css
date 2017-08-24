@@ -363,27 +363,17 @@ h1{
   margin-top: 50px;
   margin-bottom: 50px;
 }
-.mail, .message{
-  color : #FFFFFF;
-  font-weight: bold;
-  font-size: 1.2em;
-}
 #txt-contact{
   color : #FFFFFF;
   font-weight: bold;
   font-size: 1.5em;
 }
-#btn-contact{
+.mail, .message{
   color : #FFFFFF;
-  background-color:#FF5252;
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
-#btn-contact:hover{
-  color:#FF5252;
-  background-color:#FFFFFF;
-  cursor: pointer;
-}
+
 /*--BOUTON ENVOYER--*/
 main {
   height: 100vh;
@@ -396,7 +386,7 @@ main {
   width: 150px;
   text-align: center;
   position: absolute;
-  top: 85%;
+  top: 10%;
   transform: translateY(-50%);
   left: 0;
   right: 0;
@@ -405,34 +395,45 @@ main {
   border-radius: 4px;
 }
 
-.text {
+.text-envoyer {
   color : #FFFFFF;
   font-weight: bold;
   font-size: 1.5em;
   position: absolute;
   top: 50%;
-  transform: translateY(-52%);
+  transform: translateY(-50%);
   left: 0;
   right: 0;
 }
 
+#btn-contact:hover {
+  width: 150px;
+  border-radius: 4px;
+  background-color:#FFFFFF!important;
+  transform: translateY(-50%);
+  }
+
+#btn-contact:hover .text-envoyer {
+  color:#FF5252!important;
+}
+
 .progress-bar {
   position: absolute;
-  height: 15px;
+  height: 20px;
   width: 0;
   right: 0;
-  top: 85%;
+  top: 10%;
   left: 50%;
   border-radius: 200px;
   transform: translateY(-50%) translateX(-50%);
-  background: lighten(#FF5252, 15%);
+  background: #FF5252;
   background-color: #FFFFFF;
 }
 
 svg {
   width: 30px;
   position: absolute;
-  top: 85%;
+  top: 10%;
   transform: translateY(-50%) translateX(-50%);
   left: 50%;
   right: 0;

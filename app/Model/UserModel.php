@@ -18,4 +18,13 @@ class UserModel extends \W\Model\UsersModel
         $query = $this->dbh->query('SELECT id, username, avatar, description, avatar, signup_date FROM users WHERE id="' . $id . '"');
         return $query->fetchAll();
     }
+
+    public function findAllGameByUser($user)
+    {
+        $query = $this->dbh->query('SELECT * FROM play
+            INNER JOIN users ON users.id = play.id_joueur
+            INNER JOIN games ON games.id = play.id_game
+            WHERE users.id=' .$user.'');
+        return $query->fetchAll();
+    }
 }

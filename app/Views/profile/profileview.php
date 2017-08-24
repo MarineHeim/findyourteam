@@ -25,23 +25,27 @@
                 <h3>Date d'inscription :</h3>
                 <p><?php echo $profiles['signup_date'] ?></p>
             </div>
+                <?php } ?>
         </div>
+
+
         <div class="col-md-4">
-            <div class="media">
-                <div class="media-left media-middle">
-                    <a href="#">
-                    <img class="media-object" src="..." alt="...">
-                    </a>
-                </div>  
-                <div class="media-body">
-                <h4 class="media-heading">Middle aligned media</h4>
-                    ...
-                </div>
+            <?php foreach ($usergame as $usergames) { ?>
+            <div class="usergame">
+                    <h4>Jeux : <?php echo $usergames['name'] ?></h4>
+                    <h4>Niveau : <?php echo $usergames['niveau'] ?></h4>
+                    <h4>Plateforme : <?php echo $usergames['plateforme'] ?></h4>
+                    <h4>Pseudo IG : <?php echo $usergames['pseudo'] ?></h4>
             </div>
+
+            <br>
+
+            <?php } ?>
         </div>
+
+        <br>
+
     </div>
 
 
-
-    <?php } ?>
 <?php $this->stop('main_content') ?>

@@ -15,7 +15,17 @@ class GameModel extends \W\Model\Model
     }
     public function GetGameById($id)
     {
-        $query = $this->dbh->query('SELECT id, name, description, picture FROM games WHERE id="' . $id . '"');
+        $query = $this->dbh->query('SELECT id, name, description, picture FROM games
+            WHERE id="' . $id . '"');
+        return $query->fetchAll();
+    }
+
+    public function GetPlayerByGame($game_id, $id_joueur)
+    {
+        $query = $this->dbh->query('SELECT * FROM games
+        INNER JOIN play ON play.id_game = games.id
+        INNER JOIN users ON play.id_joueur = users.id
+            WHERE games.id = ' . $game_id);
         return $query->fetchAll();
     }
 }

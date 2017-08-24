@@ -43,12 +43,21 @@
 			</div>
 			<div class="col-md-6">
 				<form id="updateprofile" method="post">
+
+					<div>
+						<label for="username">Username :</label>
+						<input class="form-control" type="text" name="username" id="username" value="<?php echo $w_user['username']?>" disabled>
+					</div>
+
+
+					<br>
+
 					<div>
 						<label>Choisis ton jeu :</label>
 
 						<select class="form-control" name="jeux" id="jeux">
 							<?php  foreach ($games as $game) { ?>
-							<option value="<?php echo $game['id'] ?>"><?php echo $game['name'] ?></option>
+							<option value="<?php echo $game['id']?>"><?php echo $game['name'] ?></option>
 							<?php } ?>
 						</select>
 					</div>

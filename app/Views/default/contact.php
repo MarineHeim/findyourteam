@@ -31,8 +31,6 @@
               <path class="check" class="st0" d="M2,19.2C5.9,23.6,9.4,28,9.4,28L23,2"/>
             </svg>
           </main>
-
-
           <!-- <button id="btn-contact" name="contactForm" class="btn btn-default">Envoyer</button> -->
         </center>
     </form>

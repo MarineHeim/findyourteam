@@ -87,4 +87,13 @@ $this->layout('layout', ['title' => 'Inscription / Connexion']); ?>
     </div>
   </div>
 </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <?php $this->stop('main_content'); ?>

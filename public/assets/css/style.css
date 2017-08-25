@@ -1,8 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,700,500);
 
-* {
-    position: relative;
-}
 /* Header */
 
 /* Body */
@@ -10,9 +7,9 @@ body {
   background:#F7F7F7;
   /*position: relative;*/
   color:#FFFFFF;
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight:500;
-  background: linear-gradient(to right, #00BCD4, #0097A7);
+  background: linear-gradient(to right, #358C96, #2F3B6D);
   background-size: 100% 100%;
   width: 100%;
   height: 100%;
@@ -20,6 +17,7 @@ body {
   margin: 0;
 
 }
+
 
 html {
   position: relative;
@@ -33,21 +31,20 @@ html {
 .navbar {
     background-color: transparent;
     border: none;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-size: 1.429em;
     font-style: normal;
     font-variant: normal;
-    font-weight: bold;
+    height: 80px;
 }
-.navbar:hover{
-  color: #FF5252;
+/*.navbar:hover{
+  /*color: #FF5252;*/
     height: 90px;
-}
+}*/
 
-.navbar-brand {
-    margin: auto;
-    padding-top: 10px;
-    display: block;
+.navbar_brand {
+margin: auto;
+padding: auto;
 }
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
@@ -57,11 +54,13 @@ html {
 
 .navbar-default .navbar-nav>li>a {
     color: #FFFFFF;
+    font-family: 'Lato', sans-serif;
+    margin: 15px;
 }
 .navbar-default .navbar-nav>li>a:hover {
     color:#FF5252;
-    margin: auto;
-    padding-top: 30px;
+    /*margin: auto;*/
+    /*padding-top: 30px;*/
 }
 
 .dropdown {
@@ -75,18 +74,13 @@ html {
 }
 
 #accueil_contact:hover {
-    background-color : #B2EBF2;
-    height: 90px;
+    background-color : #40D8BA;
+    /*height: 90px;*/
     color: #FFFFFF;
 }
 #accueil_jeux:hover {
-    background-color : #0097A7;
-    height: 90px;
-    color: #FFFFFF;
-}
-#accueil_profil:hover {
-    background-color : #97DFC6;
-    height: 90px;
+    background-color : #00BCD4;
+    /*height: 90px;*/
     color: #FFFFFF;
 }
 
@@ -94,7 +88,7 @@ html {
 #sign {
   color :#FFFFFF;
   background-color : #FF5252;
-  font-weight: bold;
+  font-family: 'Lato', sans-serif;
   letter-spacing: 0.071em;
   margin-top: 15px;
 }
@@ -106,7 +100,7 @@ html {
 
 #go{
   color :#FF5252;
-  font-weight: bold;
+  font-family: 'Lato', sans-serif;
 
 }
 #go:hover{
@@ -389,10 +383,11 @@ label {
   background-color: #0097A7;
 }
 /*--HOME PAGE--*/
+
 #intro
 {
   color: #ffffff;
-  font-family: 'Quicksand', sans-serif;
+ font-family: 'Lato', sans-serif;
   font-size: 1.1em;
   font-style: normal;
   font-variant: normal;
@@ -556,6 +551,19 @@ svg {
   opacity:1;
 }
 
+.SeeAllGames {
+    background-color : #FF5252;
+    border: none;
+}
+
+.SeeAllGames:hover {
+    background-color : #FFFFFF;
+    color: #FF5252;
+    border: none;
+
+}
+
+
 /* PROFIL*/
 
 .modifier_profil, .voir_profil {
@@ -585,8 +593,36 @@ svg {
 
 /* MESSAGERIE */
 
+.send_mail {
+    color: #FFFFFF ;
+    background-color: #FF5252;
+    border: none;
+}
 
+.send_mail:hover {
+    color: #FF5252 ;
+    background-color: #FFFFFF ;
+    border: none;
+}
 
+.btn_messagerie {
+    color: #FFFFFF ;
+    background-color: #0097A7 ;
+    border: none;
+    border-radius: 3px;
+}
+
+.btn_messagerie:hover {
+    color: #0097A7 ;
+    background-color: #FFFFFF ;
+    border: none;
+    border-radius: 3px;
+}
+
+.boite_reception {
+    background-color: #FFFFFF;
+    border-radius: 6px;
+}
 /* FIN MESSAGERIE */
 
 /* TEAMS */
@@ -621,6 +657,7 @@ svg {
 /* Footer */
 footer{
   background-color: rgba(178,235,242,0.2);
+  bottom: 0;
   color: #FFFFFF;
   width: 100%;
   left: 0;

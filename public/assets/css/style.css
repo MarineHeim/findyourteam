@@ -10,13 +10,13 @@ body {
   font-family: 'Lato', sans-serif;
   font-weight:500;
   background: linear-gradient(to right, #358C96, #2F3B6D);
-  background-size: 100% 100%;
-  width: 100%;
-  height: 100%;
-  margin-bottom: 120px;
-  margin: 0;
-  z-index: 99;
-  position:absolute;
+}
+
+.fondecran{
+    background-image: url(../img/manette.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
 }
 
 
@@ -36,16 +36,16 @@ html {
     font-size: 1.429em;
     font-style: normal;
     font-variant: normal;
-    height: 80px;
+    height: 50px;
 }
-/*.navbar:hover{
-  /*color: #FF5252;*/
-    height: 90px;
-}*/
+
 
 .navbar_brand {
     margin: auto;
     padding: auto;
+}
+.navbar_brand img{
+    margin-top: 6px;
 }
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
@@ -430,8 +430,8 @@ h1{
 
 /*--BOUTON ENVOYER--*/
 main {
-  height: 100vh;
-  width: 100vw;
+  height: auto;
+  padding-bottom: 50px;
 }
 
 .button {
@@ -516,6 +516,11 @@ svg {
   font-weight: bold;
   line-height: 30px;
 
+}
+
+.desc_game {
+    width: auto;
+    height: 160px;
 }
 #description{
   color: #ffffff;
@@ -663,7 +668,7 @@ svg {
 
 /* Footer */
 footer{
-  background-color: rgba(255,255,255,0.2);
+  background-color: grey;
   font-family: 'Lato', sans-serif;
   position: relative;
   bottom: 0;
@@ -704,14 +709,3 @@ footer{
 }
 
 /* FIN  PROFILE SUR LA PAGE JEU */
-
-
-.fondecran{
-    background-image: url(../img/manette.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: rgba(255, 0, 0, 1);
-    background-position: bottom;
-    z-index: 100;
-    /*position: absolute;*/
-}

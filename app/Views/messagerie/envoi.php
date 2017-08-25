@@ -4,9 +4,9 @@
 
         <!-- Mini menu messagerie -->
         <ul class="nav nav-pills" role="tablist">
-          <li role="presentation" class="envoi_message"><a href="<?= $this->url('messagerie_envoi') ?>">Envoyer un message</a></li>
-          <li role="presentation" class="message_recu"><a href="<?= $this->url('messagerie_recu') ?>">Messages reçus<span class="badge"><?php echo count($messagesrecus) ?></span></a></li>
-          <li role="presentation" class="message_envoye"><a href="<?= $this->url('messagerie_envoye') ?>">Messages envoyés<span class="badge"><?php echo count($messagesenvoyes) ?></span></a></li>
+          <li role="presentation" class="envoi_message btn_messagerie"><a href="<?= $this->url('messagerie_envoi') ?>">Envoyer un message</a></li>
+          <li role="presentation" class="message_recu btn_messagerie"><a href="<?= $this->url('messagerie_recu') ?>">Messages reçus<span class="badge"><?php echo count($messagesrecus) ?></span></a></li>
+          <li role="presentation" class="message_envoye btn_messagerie"><a href="<?= $this->url('messagerie_envoye') ?>">Messages envoyés<span class="badge"><?php echo count($messagesenvoyes) ?></span></a></li>
         </ul>
         <!-- Fin du mini menu messagerie -->
         <br>
@@ -14,6 +14,7 @@
         <!-- Formulaire d'envoi d'un mail -->
         <form method="POST">
             <div class="form-group">
+
                 <label for="username">Nom du destinataire:</label>
                 <select class="form-control" name="destinataires">
                     <?php foreach ($destinataires as $destinataire) { ?>
@@ -32,9 +33,12 @@
             </div>
             <br>
             <br>
-            <button name="messageForm" class="btn btn-default">Envoyer</button>
+            <center>
+            <button name="messageForm" class="btn btn-default send_mail ">Envoyer</button>
+            </center>
             <?php if (isset($error)) { echo $error; } ?>
         </form>
+        <br><br><br><br><br><br><br><br><br>
         <!-- Fin du formulaire d'envoi d'un mail -->
 
 

@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="<?= $this->assetUrl('node_modules/font-awesome/css/font-awesome.min.css') ?>">
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/style.css') ?>">
 	<link rel="icon" type="image/png" href="<?= $this->assetUrl('img/favicon.png') ?>">
-	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Quicksand" />
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:600" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
@@ -28,7 +28,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="<?= $this->url('default_home') ?>">
+					<a class="navbar_brand" href="<?= $this->url('default_home') ?>">
 					<img class="img-responsive" src=" <?= $this->assetUrl('img/logofytblanc.png'); ?>" alt="logo_fyt">
 					</a>
 				</div>
@@ -47,7 +47,6 @@
 						<li class="<?= ($w_current_route === 'default_home') ? 'active' : ''; ?>"><a href="<?= $this->url('default_home') ?>"><span class="glyphicon glyphicon-home" aria-hidden="true" id="accueil_home"></span></a></li>
 						<li class="<?= ($w_current_route === 'default_contact') ? 'active' : ''; ?>"><a href="<?= $this->url('default_contact') ?>" id="accueil_contact">Contact</a></li>
 						<li class="<?= ($w_current_route === 'games_allgames') ? 'active' : ''; ?>"><a href="<?= $this->url('games_allgames') ?>" id="accueil_jeux">Jeux</a></li>
-						<li class="<?= ($w_current_route === 'profile_profile') ? 'active' : ''; ?>"><a href="<?= $this->url('profile_profile') ?>" id="accueil_profil">Profil</a></li>
 					</ul>
 
 
@@ -112,9 +111,9 @@
 
 		<!-- Arrow-top -->
 		<!-- Footer  -->
-		<footer class="">
+		<footer>
 				<div id="social-icone" class="">
-	         <ul class="list-inline">
+	         <ul class="list-inline text-center">
 	            <li>
 	               <a href="#"><i id="socialicone" class="fa fa-facebook-square fa-2x"></i></a>
 	            </li>
@@ -127,7 +126,7 @@
 	         </ul>
 	       </div>
 	       <div class="">
-	             <ul class="menu list-inline">
+	             <ul class="menu list-inline text-center">
 	              <li>
 	                 <a id="footer-menu" href="<?= $this->url('default_home') ?>">Accueil</a>
 	               </li>
@@ -139,10 +138,11 @@
 	               </li>
 	             </ul>
 	        </div>
-	 			 <div class="">
+	 			 <div class="text-center">
 	 				 <p class="droits-legal" >Find your team © 2017 All rights reserved</p>
 	 			 </div>
 		</footer>
+
 		<!-- Fin du footer  -->
 
 

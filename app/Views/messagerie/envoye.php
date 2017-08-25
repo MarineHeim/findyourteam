@@ -4,9 +4,9 @@
 
     <!-- Mini menu messagerie -->
     <ul class="nav nav-pills" role="tablist">
-        <li role="presentation" class="envoi_message"><a href="<?= $this->url('messagerie_envoi') ?>">Envoyer un message</a></li>
-        <li role="presentation" class="message_recu"><a href="<?= $this->url('messagerie_recu') ?>">Messages reçus<span class="badge"><?php echo count($messagesrecus) ?></span></a></li>
-        <li role="presentation" class="message_envoye"><a href="<?= $this->url('messagerie_envoye') ?>">Messages envoyés<span class="badge"><?php echo count($messagesenvoyes) ?></span></a></li>
+        <li role="presentation" class="envoi_message btn_messagerie"><a href="<?= $this->url('messagerie_envoi') ?>">Envoyer un message</a></li>
+        <li role="presentation" class="message_recu btn_messagerie"><a href="<?= $this->url('messagerie_recu') ?>">Messages reçus<span class="badge"><?php echo count($messagesrecus) ?></span></a></li>
+        <li role="presentation" class="message_envoye btn_messagerie"><a href="<?= $this->url('messagerie_envoye') ?>">Messages envoyés<span class="badge"><?php echo count($messagesenvoyes) ?></span></a></li>
     </ul>
     <!-- Fin du mini menu messagerie -->
     <br>
@@ -21,7 +21,7 @@
         <p><?php echo $messagesenvoye['time'] ?></p>
         <br>
     </div>
-
+    <br><br><br><br><br><br><br><br><br>
     <?php }
     ?>
 

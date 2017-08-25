@@ -34,7 +34,8 @@ class DefaultController extends Controller
 
 	}
 		 }
-		  $mailDestinataire="marineheim@gmail.com";
+
+		  $mailDestinataire="marine.heim@outlook.com";
 
 			$from = "From: <".$email.">";
 

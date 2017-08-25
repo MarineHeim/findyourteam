@@ -61,7 +61,6 @@
 							  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
 							    <li><a href="<?= $this->url('profile_profile') ?>">Mon profil</a></li>
 							    <li><a href="<?= $this->url('messagerie_envoi') ?>">Ma messagerie</a></li>
-							    <li><a href="<?= $this->url('teams_teams') ?>">Mes teams</a></li>
 							  </ul>
 						</div>
 						<ul class="nav navbar-nav navbar-right">

@@ -44,8 +44,8 @@ html {
 }*/
 
 .navbar_brand {
-margin: auto;
-padding: auto;
+    margin: auto;
+    padding: auto;
 }
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
@@ -59,7 +59,7 @@ padding: auto;
     margin: 15px;
 }
 .navbar-default .navbar-nav>li>a:hover {
-    color:#FF5252;
+    color:#00BCD4;
     /*margin: auto;*/
     /*padding-top: 30px;*/
 }
@@ -74,38 +74,28 @@ padding: auto;
     padding-top: 15px;
 }
 
-#accueil_contact:hover {
-    background-color : #40D8BA;
-    /*height: 90px;*/
-    color: #FFFFFF;
-}
-#accueil_jeux:hover {
-    background-color : #00BCD4;
-    /*height: 90px;*/
-    color: #FFFFFF;
-}
 
 
 #sign {
   color :#FFFFFF;
-  background-color : #FF5252;
+  background-color : #00bcd4;
   font-family: 'Lato', sans-serif;
   letter-spacing: 0.071em;
   margin-top: 15px;
 }
 
 #sign:hover{
-  background-color : #FFFFFF;
-  color: #FF5252;
+  background-color : #00bcd4;
+  color: #FFFFFF;
 }
 
 #go{
-  color :#FF5252;
+  color :#00bcd4;
   font-family: 'Lato', sans-serif;
 
 }
 #go:hover{
-  background-color : #FF5252;
+  background-color : #00bcd4;
   color:  #FFFFFF;
 }
 
@@ -388,7 +378,7 @@ label {
 #intro
 {
   color: #ffffff;
- font-family: 'Lato', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-size: 1.1em;
   font-style: normal;
   font-variant: normal;
@@ -404,16 +394,17 @@ label {
 
 /*--BOUTON--*/
 #btn-inscritption{
-  background-color : #FF5252;
-  font-weight: bold;
+  background-color : transparent;
+  border-color: #00bcd4;
+  font-family: 'Lato', sans-serif;
   font-size: 1.5em;
   letter-spacing: 0.15em;
   margin-bottom: 30px;
   margin-top:20px;
 }
 #btn-inscritption:hover{
-  background-color : #FFFFFF;
-  color: #FF5252;
+  background-color : #00bcd4;
+  color: #FFFFFF;
 }
 
 /*--FIN HOME PAGE--*/
@@ -518,7 +509,7 @@ svg {
 /*--ALL GAMES--*/
 .title-game{
   color: #FFFFFF;
-  font-family: Quicksand;
+  font-family: 'Lato', sans-serif;
   font-size: 1.786em;
   font-style: normal;
   font-variant: normal;
@@ -553,13 +544,13 @@ svg {
 }
 
 .SeeAllGames {
-    background-color : #FF5252;
+    background-color : #00BCD4;
     border: none;
 }
 
 .SeeAllGames:hover {
     background-color : #FFFFFF;
-    color: #FF5252;
+    color: #00BCD4;
     border: none;
 
 }
@@ -568,25 +559,60 @@ svg {
 /* PROFIL*/
 
 .modifier_profil, .voir_profil {
-    color : #0097A7;
-    background-color:#B2EBF2;
+    color : #2F3B6D;
+    background-color:#FFFFFF;
     border: none;
 }
 
 .modifier_profil:hover, .voir_profil:hover {
-    color : #B2EBF2;
-    background-color:#0097A7;
+    color : #FFFFFF;
+    background-color:#2F3B6D;
     border: none;
 }
 
 .modifier_photo, .modifier_description, .ajouter_jeu {
     color : #FFFFFF;
-    background-color:#FF5252;
+    background-color:#00BCD4;
     border: none;
 }
 
 .modifier_photo:hover, .modifier_description:hover, .ajouter_jeu:hover {
-    color : #FF5252;
+    color : #00BCD4;
+    background-color:#FFFFFF;
+    border: none;
+}
+
+.photo_profil {
+    height: 125px;
+    width:125px;
+    border-radius: 100%;
+}
+
+.partie1_profil {
+    background-color: #EFEFEF;
+    padding: 10px;
+    color: #358C96;
+}
+
+.partie2_profil {
+    background-color: #DCDCDC;
+    color: #358C96;
+    height: auto;
+}
+
+.partie3_profil {
+    background-color: #DCDCDC;
+    color: #358C96;
+}
+
+.contacter_joueur {
+    color : #FFFFFF;
+    background-color:#00BCD4;
+    border: none;
+}
+
+.contacter_joueur:hover {
+    color : #00BCD4;
     background-color:#FFFFFF;
     border: none;
 }
@@ -595,33 +621,33 @@ svg {
 /* MESSAGERIE */
 
 .send_mail {
-    color: #FFFFFF ;
-    background-color: #FF5252;
+    color: #00BCD4;
+    background-color: #FFFFFF;
     border: none;
 }
 
 .send_mail:hover {
-    color: #FF5252 ;
-    background-color: #FFFFFF ;
+    color: #FFFFFF ;
+    background-color: #00BCD4 ;
     border: none;
 }
 
 .btn_messagerie {
-    color: #FFFFFF ;
-    background-color: #0097A7 ;
+    color: #00BCD4 ;
+    background-color: #FFFFFF ;
     border: none;
     border-radius: 3px;
 }
 
 .btn_messagerie:hover {
-    color: #0097A7 ;
-    background-color: #FFFFFF ;
+    color: #FFFFFF ;
+    background-color: #00BCD4 ;
     border: none;
     border-radius: 3px;
 }
 
 .boite_reception {
-    background-color: #FFFFFF;
+    background-color: #00BCD4;
     border-radius: 6px;
     border-bottom: 2px #2F3B6D solid;
     border-top: 2px #2F3B6D solid;
@@ -634,38 +660,12 @@ svg {
 
 /* FIN MESSAGERIE */
 
-/* TEAMS */
-.create_team {
-    color : #FFFFFF;
-    background-color:#FF5252;
-    border: none;
-     font-size: 1.5em;
-}
-
-.create_team:hover {
-    color : #FF5252;
-    background-color:#FFFFFF;
-    border: none;
-    font-size: 1.5em;
-}
-
-#updatecreateteam {
-    color : #FFFFFF;
-    background-color:#FF5252;
-    border: none;
-     font-size: 1.3em;
-}
-
-.formcontrol_team {
-
-}
-
-
-/* FIN TEAMS */
 
 /* Footer */
 footer{
-  background-color: rgba(178,235,242,0.2);
+  background-color: rgba(255,255,255,0.2);
+  font-family: 'Lato', sans-serif;
+  position: relative;
   bottom: 0;
   color: #FFFFFF;
   width: 100%;
@@ -675,20 +675,20 @@ footer{
 }
 
 #socialicone{
-  color:#B2EBF2;
+  color:#FFFFFF;
   padding-top: 14px;
 }
 #socialicone:hover{
-  color:#FFFFFF;
+  color:#606060;
 }
 
 #footer-menu{
-  color:#B2EBF2;
+  color:#FFFFFF;
+  font-family: 'Lato', sans-serif;
   font-size: 1.429em;
-  font-weight: bold;
 }
 #footer-menu:hover{
-  color:#FFFFFF;
+  color:#606060;
   text-decoration: none;
 }
 

@@ -32,7 +32,7 @@ class GamesController extends Controller
         $userongame =$game_manager->GetPlayerByGame($onegame[0]['id'], $user['id']);
 
 
-        $this->show('/games/onegame', ['onegame' => $onegame, 'userongame' => $userongame]);
+        $this->show('/games/onegame', ['onegame' => $onegame, 'userongame' => $userongame, 'user' => $user]);
     }
 
 

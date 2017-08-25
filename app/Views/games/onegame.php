@@ -20,30 +20,36 @@
         <!-- Fin Présentation du jeu -->
         <?php } ?>
 
-        <!-- Les derniers joueurs inscrits  -->
-        <div class="col-md-6">
-            <h4>Derniers joueurs inscrits</h4>
-            <hr>
-            <?php  foreach ($userongame as $userongames) { ?>
-            <h3><?php echo $userongames['username'] ?></h3>
-            <img class="img-responsive" src="<?= $this->assetUrl('img/avatars/' . $userongames['avatar']) ?>" alt="...">
-            <p>est disponible pour jouer</p>
-            <hr>
-            <?php } ?>
-            <button class="btn btn-primary" name="seeGamers">Voir tous les joueurs</button>
 
+        <!-- Les derniers joueurs inscrits  -->
+        <h4>Derniers joueurs inscrits</h4>
+        <?php  foreach ($userongame as $userongames) { ?>
+
+
+        <div class="col-md-2 profilejeux">
+
+            <div class="">
+                <h3><?php echo $userongames['username'] ?></h3>
+                <img class="img-responsive" src="<?= $this->assetUrl('img/avatars/' . $userongames['avatar']) ?>" alt="...">
+                <br>
+                <p>Pseudo IG : <?php echo $userongames['pseudo'] ?></p>
+                <p>Niveau : <?php echo $userongames['niveau'] ?></p>
+                <p>Plateforme : <?php echo $userongames['plateforme'] ?></p>
+                <button href="<?= $this->url('profile_profile_view', ['id' => $user['id']]) ?>" class="btn btn-primary" name="seeGamers">Voir profil</button>
+            </div>
         </div>
+        <?php } ?>
 
         <!-- Fin les derniers joueurs inscrits  -->
 
         <!-- Les dernières teams inscrites  -->
-        <div class="col-md-6">
+        <!-- <div class="col-md-6">
             <h4>Dernières équipes inscrites</h4>
             <hr>
             <p>recherche des joueurs</p>
             <hr>
             <button class="btn btn-primary" name="seeTeams">Voir toutes les teams</button>
-        </div>
+        </div> -->
         <!-- Fin les dernières teams inscrites  -->
     </div>
 </div>

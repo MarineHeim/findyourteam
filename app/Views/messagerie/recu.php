@@ -11,32 +11,47 @@
 <!-- Fin du mini menu messagerie -->
 <br>
 <br>
-        <?php  foreach ($messagesrecus as $messagesrecu) { ?>
+
+<?php  foreach ($messagesrecus as $messagesrecu) { ?>
 <div class="container boite_reception">
     <div class="row">
         <div class="messagesrecus">
             <a href="<?= $this->url('messagerie_lecture', ['id' => $messagesrecu['id']]); ?>">
-            <div class="col-md-3">
-            <h3><?php echo $messagesrecu['expediteur'] ?></h3>
+
+            <div class="col-md-2">
+            <h4 class="text-center">Expéditeur  </h4>
+            <p class="text-center"><?php echo $messagesrecu['expediteur'] ?></p>
             </div>
-            <div class="col-md-3">
-            <h4><?php echo $messagesrecu['titre'] ?></h4>
+
+
+            <div class="col-md-2">
+            <h4 class="text-center">Titre  </h4>
+            <p class="text-center"><?php echo $messagesrecu['titre'] ?></p>
             </div>
+
+
             <div class="col-md-3">
-            <p><?php echo $messagesrecu['text'] ?></p>
+            <h4 class="text-center">Message  </h4>
+            <p class="text-center"><?php echo $messagesrecu['text'] ?></p>
             </div>
+
+
             <div class="col-md-3">
-            <p><?php echo $messagesrecu['time'] ?></p>
+            <h4 class="text-center">Reception le  </h4>
+            <p class="text-center"><?php echo $messagesrecu['time'] ?></p>
             </a>
             </div>
+
+            <div class="col-md-2">
+                <button type="reset"  name="Effacer" class="btn btn-default btn_message">Supprimer ce message</button>
+            </div>
+
             <br>
             <br>
-            </div>
-            </div>
-            <input type="reset" name="Effacer" value="Supprimer ce message" />
         </div>
-        <br><br><br><br><br><br><br><br><br>
+    </div>
 </div>
-        <?php }
-        ?>
+
+
+        <?php }?>
 <?php $this->stop('main_content'); ?>

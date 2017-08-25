@@ -17,7 +17,7 @@
 	</div>
 
 
-	<br>
+	<br><br><br>
 
 	<!-- Formulaire pour ajouter un jeu a son profil -->
 
@@ -25,14 +25,12 @@
 			<div class="col-md-6">
 				<div class="Avatar">
 					<form id="updateavatar"method="post" enctype="multipart/form-data">
-						<img src="<?= $this->assetUrl('img/avatar.png') ?>" alt="">
-						<br> <br>
 						<input class="btn btn-default " type="file" name="avatar" id="avatar" value=""><br>
 						<button class="btn btn-default modifier_photo" name="updateavatar" id="updateavatar">Ajouter/modifier la photo</button>
 					</form>
 				</div>
 
-
+				<br><br><br>
 				<div class="">
 					<h3>Ta présentation :</h3>
 					<form id="updatedescription" method="post">

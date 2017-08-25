@@ -15,7 +15,8 @@ body {
   height: 100%;
   margin-bottom: 120px;
   margin: 0;
-
+  z-index: 99;
+  position:absolute;
 }
 
 
@@ -439,7 +440,7 @@ main {
   width: 150px;
   text-align: center;
   position: absolute;
-  top: 10%;
+  /*top: 10%;*/
   transform: translateY(-50%);
   left: 0;
   right: 0;
@@ -475,7 +476,7 @@ main {
   height: 20px;
   width: 0;
   right: 0;
-  top: 10%;
+  /*top: 10%;*/
   left: 50%;
   border-radius: 200px;
   transform: translateY(-50%) translateX(-50%);
@@ -486,7 +487,7 @@ main {
 svg {
   width: 30px;
   position: absolute;
-  top: 10%;
+  /*top: 10%;*/
   transform: translateY(-50%) translateX(-50%);
   left: 50%;
   right: 0;
@@ -648,7 +649,15 @@ svg {
 .boite_reception {
     background-color: #00BCD4;
     border-radius: 6px;
+    border-bottom: 2px #2F3B6D solid;
+    border-top: 2px #2F3B6D solid;
+    margin-bottom:2px;
 }
+
+.btn_message {
+    margin-top:17px;
+}
+
 /* FIN MESSAGERIE */
 
 
@@ -684,3 +693,25 @@ footer{
 }
 
 /* Fin du footer */
+
+
+/* PROFILE SUR LA PAGE JEU */
+
+.profilejeux img{
+    height: 125px;
+    width: 125px;
+    border-radius: 100%;
+}
+
+/* FIN  PROFILE SUR LA PAGE JEU */
+
+
+.fondecran{
+    background-image: url(../img/manette.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(255, 0, 0, 1);
+    background-position: bottom;
+    z-index: 100;
+    /*position: absolute;*/
+}

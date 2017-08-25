@@ -76,9 +76,9 @@
 
 					<form class="navbar-form navbar-right">
         				<div class="form-group search">
-          					<input id="research" type="text" class="form-control" value="" placeholder="Recherche...">
+          					<input id="research" type="text" class="input-search form-control" value="" placeholder="Recherche...">
 
-        					<button id="go" type="submit" class="btn btn-default">GO !</button>
+        					<button  type="submit" class="btn btn-default btn-search">Go !</button>
 							</div>
       				</form>
 				</div>
@@ -115,13 +115,13 @@
 				<div id="social-icone" class="">
 	         <ul class="list-inline text-center">
 	            <li>
-	               <a href="#"><i id="socialicone" class="fa fa-facebook-square fa-2x"></i></a>
+	               <a href="https://fr-fr.facebook.com/"><i id="socialicone" class="fa fa-facebook-square fa-2x"></i></a>
 	            </li>
 	            <li>
-	               <a href="#"><i id="socialicone" class="fa fa-linkedin-square fa-2x"></i></a>
+	               <a href="https://fr.linkedin.com/"><i id="socialicone" class="fa fa-linkedin-square fa-2x"></i></a>
 	            </li>
 	            <li>
-	               <a href="#"><i id="socialicone" class="fa fa-tumblr-square fa-2x"></i></a>
+	               <a href="https://www.tumblr.com/"><i id="socialicone" class="fa fa-tumblr-square fa-2x"></i></a>
 	            </li>
 	         </ul>
 	       </div>

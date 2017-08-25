@@ -1,8 +1,12 @@
 <?php $this->layout('layout', ['title' => 'Accueil']) ?>
 
 <?php $this->start('main_content') ?>
-
+</div>
 <!-- Image /animé -->
+	<div class="fondecran">
+<div class="container">
+
+
 
 	<div class="">
 		<img class="animationfyt" src="<?= $this->assetUrl('animation/animationfyt.svg') ?>" alt="">
@@ -29,5 +33,6 @@
 <br>
 <!-- Fin intro site -->
 
-
+</div>
+</div>
 <?php $this->stop('main_content') ?>

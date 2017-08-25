@@ -14,14 +14,40 @@
 
     <?php  foreach ($messagesenvoyes as $messagesenvoye) { ?>
     <!-- Présentation du jeu -->
-    <div class="messagesenvoyes">
-        <h3><?php echo $messagesenvoye['destinataire'] ?></h3>
-        <h4><?php echo $messagesenvoye['titre'] ?></h4>
-        <p><?php echo $messagesenvoye['text'] ?></p>
-        <p><?php echo $messagesenvoye['time'] ?></p>
-        <br>
+    <div class="container boite_reception">
+        <div class="row">
+            <div class="messagesrecus">
+                <a href="<?= $this->url('messagerie_lecture', ['id' => $messagesenvoye['id']]); ?>">
+
+                <div class="col-md-3">
+                <h4 class="text-center">Destinataire  </h4>
+                <p class="text-center"><?php echo $messagesenvoye['destinataire'] ?></p>
+                </div>
+
+
+                <div class="col-md-3">
+                <h4 class="text-center">Titre  </h4>
+                <p class="text-center"><?php echo $messagesenvoye['titre'] ?></p>
+                </div>
+
+
+                <div class="col-md-3">
+                <h4 class="text-center">Message  </h4>
+                <p class="text-center"><?php echo $messagesenvoye['text'] ?></p>
+                </div>
+
+
+                <div class="col-md-3">
+                <h4 class="text-center">Envoyer le  </h4>
+                <p class="text-center"><?php echo $messagesenvoye['time'] ?></p>
+                </a>
+                </div>
+
+                <br>
+                <br>
+            </div>
+        </div>
     </div>
-    <br><br><br><br><br><br><br><br><br>
     <?php }
     ?>
 

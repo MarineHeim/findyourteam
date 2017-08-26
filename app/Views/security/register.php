@@ -16,7 +16,7 @@ $this->layout('layout', ['title' => 'Inscription / Connexion']); ?>
 
 <?php $this->start('main_content'); ?>
 
-  <div class="container">
+  <div>
    <div class="row">
     <div class="col-md-6 col-md-offset-3">
       <div class="panel panel-login">

@@ -6,10 +6,10 @@
 
 	<link rel="stylesheet" href="<?= $this->assetUrl('node_modules/bootstrap/dist/css/bootstrap.min.css') ?>">
 	<link rel="stylesheet" href="<?= $this->assetUrl('node_modules/font-awesome/css/font-awesome.min.css') ?>">
-	<link rel="stylesheet" href="<?= $this->assetUrl('css/style.css') ?>">
 	<link rel="icon" type="image/png" href="<?= $this->assetUrl('img/favicon.png') ?>">
 	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:600" rel="stylesheet">
+	<link rel="stylesheet" href="<?= $this->assetUrl('css/style.css') ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
 
@@ -19,8 +19,8 @@
 	<!-- Header -->
 	<header>
 		<!-- Menu -->
-		<nav class="navbar navbar-default">
-			<div class="container">
+		<nav class="navbar navbar-default container">
+			<div >
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 						<span class="sr-only">Toggle navigation</span>
@@ -110,37 +110,40 @@
 
 		<!-- Arrow-top -->
 		<!-- Footer  -->
-		<footer>
-				<div id="social-icone" class="">
-	         <ul class="list-inline text-center">
-	            <li>
-	               <a href="https://fr-fr.facebook.com/"><i id="socialicone" class="fa fa-facebook-square fa-2x"></i></a>
-	            </li>
-	            <li>
-	               <a href="https://fr.linkedin.com/"><i id="socialicone" class="fa fa-linkedin-square fa-2x"></i></a>
-	            </li>
-	            <li>
-	               <a href="https://www.tumblr.com/"><i id="socialicone" class="fa fa-tumblr-square fa-2x"></i></a>
-	            </li>
-	         </ul>
-	       </div>
-	       <div class="">
-	             <ul class="menu list-inline text-center">
-	              <li>
-	                 <a id="footer-menu" href="<?= $this->url('default_home') ?>">Accueil</a>
-	               </li>
-	               <li>
-	                  <a id="footer-menu" href="<?= $this->url('default_contact') ?>">Contact</a>
-	               </li>
-	               <li>
-	                 <a id="footer-menu" href="<?= $this->url('games_allgames') ?>">Jeux</a>
-	               </li>
-	             </ul>
-	        </div>
-	 			 <div class="text-center">
-	 				 <p class="droits-legal" >Find your team © 2017 All rights reserved</p>
-	 			 </div>
-		</footer>
+		<div class="clear">
+
+			<footer >
+					<div id="social-icone" class="">
+		         <ul class="list-inline text-center">
+		            <li>
+		               <a href="https://fr-fr.facebook.com/"><i id="socialicone" class="fa fa-facebook-square fa-2x"></i></a>
+		            </li>
+		            <li>
+		               <a href="https://fr.linkedin.com/"><i id="socialicone" class="fa fa-linkedin-square fa-2x"></i></a>
+		            </li>
+		            <li>
+		               <a href="https://www.tumblr.com/"><i id="socialicone" class="fa fa-tumblr-square fa-2x"></i></a>
+		            </li>
+		         </ul>
+		       </div>
+		       <div class="">
+		             <ul class="menu list-inline text-center">
+		              <li>
+		                 <a id="footer-menu" href="<?= $this->url('default_home') ?>">Accueil</a>
+		               </li>
+		               <li>
+		                  <a id="footer-menu" href="<?= $this->url('default_contact') ?>">Contact</a>
+		               </li>
+		               <li>
+		                 <a id="footer-menu" href="<?= $this->url('games_allgames') ?>">Jeux</a>
+		               </li>
+		             </ul>
+		        </div>
+		 			 <div class="text-center">
+		 				 <p class="droits-legal" >Find your team © 2017 All rights reserved</p>
+		 			 </div>
+			</footer>
+		</div>
 
 		<!-- Fin du footer  -->
 

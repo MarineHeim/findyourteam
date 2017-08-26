@@ -4,39 +4,28 @@
 
 /* Body */
 body {
-  background:#F7F7F7;
-  /*position: relative;*/
-  color:#FFFFFF;
+  background-image: url(../img/bg.jpg);
+  background-attachment: fixed;
   font-family: 'Lato', sans-serif;
   font-weight:500;
-  background: linear-gradient(to right, #358C96, #2F3B6D);
 }
 
-.fondecran{
-    background-image: url(../img/manette.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
+.container {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
-
-html {
-  position: relative;
-  min-height: 100%;
-  height: 100%;
-  display: block;
-
-}
 
 /* Menu */
 .navbar {
-    background-color: transparent;
+    background-color: rgba(51, 51, 51, 0.3);
     border: none;
     font-family: 'Lato', sans-serif;
     font-size: 1.429em;
     font-style: normal;
     font-variant: normal;
-    height: 50px;
+    border-radius: 0;
 }
 
 
@@ -668,14 +657,14 @@ svg {
 
 /* Footer */
 footer{
-  background-color: grey;
+  background-color: rgba(8, 57, 110, 0.5);
+  filter:Alpha(opacity=94);-moz-opacity:0.94;opacity: 0.94;
   font-family: 'Lato', sans-serif;
   position: relative;
   bottom: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
   color: #FFFFFF;
   width: 100%;
-  left: 0;
-  right: 0;
   height: 120px;
 }
 

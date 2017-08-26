@@ -10,7 +10,7 @@
 
 	<div class="">
 		<img class="animationfyt" src="<?= $this->assetUrl('animation/animationfyt.svg') ?>" alt="">
-		<div class="container">
+		<div>
 			<a href="<?= $this->url('security_register')?>"><center><button id="btn-inscritption" class="btn btn-info btn-lg" name="registerForm">Je m'inscris !</button></center></a>
 		</div>
 	</div>

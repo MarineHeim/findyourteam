@@ -20,8 +20,8 @@
           <br>
           <br>
         <div class="text-center" >
-          <main class="container">
-            <div id="btn-contact" name="contactForm" class="button animate">
+          <main>
+            <div name="contactForm" class="button animate">
               <div   class="text-envoyer">Envoyer</div>
             </div>
             <div class="progress-bar"></div>

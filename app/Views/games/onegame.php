@@ -8,7 +8,7 @@
     <center>
         <!-- Présentation du jeu -->
         <div class="onegame">
-            <h3><?php echo $game['name'] ?></h3>
+            <h1 class="animated shake"><?php echo $game['name'] ?></h1>
             <br>
             <br>
             <img class="img-responsive" src="<?= $this->assetUrl('img/jeux/' . $game['picture']) ?>" alt="...">

@@ -14,7 +14,7 @@
 
     <?php  foreach ($messagesenvoyes as $messagesenvoye) { ?>
     <!-- Présentation du jeu -->
-    <div class="container boite_reception">
+    <div class=" boite_reception">
         <div class="row">
             <div class="messagesrecus">
                 <a href="<?= $this->url('messagerie_lecture', ['id' => $messagesenvoye['id']]); ?>">
@@ -38,7 +38,7 @@
 
 
                 <div class="col-md-3">
-                <h4 class="text-center">Envoyer le  </h4>
+                <h4 class="text-center">Envoyé le  </h4>
                 <p class="text-center"><?php echo $messagesenvoye['time'] ?></p>
                 </a>
                 </div>

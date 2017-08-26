@@ -1,4 +1,4 @@
-<?php $this->layout('layout', ['title' => 'Messagerie']); ?>
+<?php $this->layout('layout', ['title' => 'Envoyer un message']); ?>
 
 <?php $this->start('main_content');?>
 

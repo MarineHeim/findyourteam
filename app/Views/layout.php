@@ -77,7 +77,7 @@
         				<div class="form-group search">
           					<input id="research" type="text" class="input-search form-control" value="" placeholder="Recherche...">
 
-        					<button  type="submit" class="btn btn-default btn-search">Go !</button>
+        					<button  id="go" type="submit" class="btn btn-default btn-search">GO!</button>
 							</div>
       				</form>
 				</div>
@@ -140,7 +140,7 @@
 		             </ul>
 		        </div>
 		 			 <div class="text-center">
-		 				 <p class="droits-legal" >Find your team © 2017 All rights reserved</p>
+		 				 <p class="droits-legal" >Find your mate © 2017 All rights reserved</p>
 		 			 </div>
 			</footer>
 		</div>

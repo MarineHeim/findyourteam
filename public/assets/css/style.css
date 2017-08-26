@@ -4,17 +4,28 @@
 
 /* Body */
 body {
-  background-image: url(../img/bg.jpg);
-  background-attachment: fixed;
-  font-family: 'Lato', sans-serif;
-  font-weight:500;
+ background: linear-gradient(to right, #358C96, #2F3B6D);
+ background-attachment: fixed;
+ font-family: 'Lato', sans-serif;
+ font-weight:500;
+ min-height: 100vh;
+ display: flex;
+ flex-direction: column;
 }
 
 .container {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+   background-color: rgba(255, 255, 255, 0.1);
+   border-top-left-radius: 5px;
+   border-top-right-radius: 5px;
+   flex-grow: 1;
 }
+
+.fondecran{
+    background-image: url(../img/manette.png);
+    background-repeat: no-repeat;
+   background-size: cover;
+   background-position: bottom;
+ }
 
 
 /* Menu */
@@ -79,12 +90,13 @@ body {
 }
 
 #go{
+  background-color : #FFFFFF;
   color :#00bcd4;
   font-family: 'Lato', sans-serif;
 
 }
 #go:hover{
-  background-color : #00bcd4;
+  background-color : #00BCD4;
   color:  #FFFFFF;
 }
 
@@ -206,7 +218,7 @@ label {
   height: 17px;
   left: 0;
   margin-left: 0px;
-  border: 1px solid #0097A7;
+  border: 1px solid #2F3B6D;
   border-radius: 3px;
   background-color: #fff;
   -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
@@ -237,7 +249,7 @@ label {
 .panel-login .checkbox input[type="checkbox"]:checked + label::after {
   font-family: 'FontAwesome';
   content: "\f00c";
-  color: #0097A7
+  color: #0097A7;
 }
 .panel-login>.panel-heading .tabs{
   padding: 0;
@@ -246,11 +258,11 @@ label {
   font-size: 1.429em;
   font-weight: bold;
   margin: 30px;
-  color:  #0097A7;
+  color:  #358C96;
 }
 .panel-login>.panel-heading {
-  color: #757575;
-  background-color: #B2EBF2;
+  color: #FFFFFF;
+  background-color: #2F3B6D;
   border-color: #fff;
   text-align:center;
   border-bottom-left-radius: 5px;
@@ -289,7 +301,7 @@ label {
 .panel-login>.panel-heading a#login-form-link {
   width: 100%;
   text-align: left;
-  color: #0097A7;
+  color: #ffffff;
 
 }
 
@@ -302,7 +314,7 @@ label {
   transition: all 0.1s linear;
   -webkit-box-shadow: none;
   box-shadow: none;
-  border-bottom: 1px solid #B2EBF2;
+  border-bottom: 1px solid #358C96;
   border-radius: 0px;
   padding: 6px 0px;
 }
@@ -312,10 +324,10 @@ label {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-  border-color: #FF5252;
+  border-color: #00BCD4;
 }
 .btn-login {
-  background-color: #FF5252;
+  background-color: #00BCD4;
   outline: none;
   color: #FFFFFF;
   font-size: 1.1em;
@@ -330,7 +342,7 @@ label {
 .btn-login:hover,
 .btn-login:focus {
   color: #fff;
-  background-color: #0097A7;
+  background-color: #358C96;
 }
 .forgot-password {
   text-decoration: underline;
@@ -342,10 +354,10 @@ label {
   color: #FF5252;
 }
 .remember-me{
-  color:  #0097A7;
+  color: grey;
 }
 .btn-register {
-  background-color: #FF5252;
+  background-color: #00BCD4;
   outline: none;
   color: #ffffff;
   font-size: 1em;
@@ -360,7 +372,7 @@ label {
 .btn-register:hover,
 .btn-register:focus {
   color: #fff;
-  background-color: #0097A7;
+  background-color: #358C96;
 }
 /*--HOME PAGE--*/
 
@@ -424,7 +436,7 @@ main {
 }
 
 .button {
-  background-color:#FF5252;
+  background-color:#00bcd4;
   height: 60px;
   width: 150px;
   text-align: center;
@@ -469,7 +481,7 @@ main {
   left: 50%;
   border-radius: 200px;
   transform: translateY(-50%) translateX(-50%);
-  background: #FF5252;
+  background: #358C96;
   background-color: #FFFFFF;
 }
 
@@ -484,7 +496,7 @@ svg {
 
 .check {
   fill: none;
-  stroke: #FF5252;
+  stroke: #00bcd4;
   stroke-width: 3;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -553,14 +565,14 @@ svg {
 /* PROFIL*/
 
 .modifier_profil, .voir_profil {
-    color : #2F3B6D;
+    color : #00BCD4;
     background-color:#FFFFFF;
     border: none;
 }
 
 .modifier_profil:hover, .voir_profil:hover {
     color : #FFFFFF;
-    background-color:#2F3B6D;
+    background-color:#00BCD4;
     border: none;
 }
 
@@ -577,26 +589,31 @@ svg {
 }
 
 .photo_profil {
-    height: 125px;
-    width:125px;
-    border-radius: 100%;
+  border-radius: 50%;
+  width: 175px;
+  height: 175px;
+  border: 2px solid #FFF;
+  margin: 10px;
 }
 
 .partie1_profil {
-    background-color: #EFEFEF;
+    background-color: #00BCD4;
     padding: 10px;
-    color: #358C96;
 }
 
 .partie2_profil {
-    background-color: #DCDCDC;
-    color: #358C96;
-    height: auto;
+    background-color: #358C96;
+    color: #FFFFFF;
 }
 
 .partie3_profil {
     background-color: #DCDCDC;
     color: #358C96;
+}
+
+.partie4_profil {
+  background-color: #DCDCDC;
+  color: #358C96;
 }
 
 .contacter_joueur {
@@ -641,7 +658,7 @@ svg {
 }
 
 .boite_reception {
-    background-color: #00BCD4;
+    background-color: #FFFFFF;
     border-radius: 6px;
     border-bottom: 2px #2F3B6D solid;
     border-top: 2px #2F3B6D solid;
@@ -657,12 +674,12 @@ svg {
 
 /* Footer */
 footer{
-  background-color: rgba(8, 57, 110, 0.5);
+  background-color: #24445C;
   filter:Alpha(opacity=94);-moz-opacity:0.94;opacity: 0.94;
   font-family: 'Lato', sans-serif;
   position: relative;
   bottom: 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  /*border-top: 1px solid rgba(255, 255, 255, 0.5);*/
   color: #FFFFFF;
   width: 100%;
   height: 120px;
@@ -673,7 +690,7 @@ footer{
   padding-top: 14px;
 }
 #socialicone:hover{
-  color:#606060;
+  color:#00BCD4;
 }
 
 #footer-menu{
@@ -682,7 +699,7 @@ footer{
   font-size: 1.429em;
 }
 #footer-menu:hover{
-  color:#606060;
+  color:#00BCD4;
   text-decoration: none;
 }
 
@@ -691,10 +708,6 @@ footer{
 
 /* PROFILE SUR LA PAGE JEU */
 
-.profilejeux img{
-    height: 125px;
-    width: 125px;
-    border-radius: 100%;
-}
+
 
 /* FIN  PROFILE SUR LA PAGE JEU */

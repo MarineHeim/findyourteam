@@ -53,7 +53,9 @@ class SecurityController extends \W\Controller\Controller
                     'username' => $login,
                     'email' => $email,
                     'password' => $auth_manager->hashPassword($password),
-                    'role' => 'user'
+                    'role' => 'user',
+                    'avatar' => 'default_avatar.jpg',
+                    'signup_date' => (new \DateTime('now'))->format('Y-m-d')
                 ]);
                 // Je connecte l'utilisateur
                 $auth_manager->logUserIn($user);

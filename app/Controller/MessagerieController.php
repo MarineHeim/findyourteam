@@ -32,6 +32,7 @@ class MessagerieController extends Controller
                 $this->flash('Votre message a bien été envoyé.', 'success');
                 $this->redirectToRoute('messagerie_envoi');
 
+
         }
     	$this->show('messagerie/envoi', ['destinataires' => $destinataires,
                                         'messagesrecus' => $messagesrecus,
@@ -82,5 +83,12 @@ class MessagerieController extends Controller
         $this->show('/messagerie/lecture', ['messagelecture' => $messagelecture]);
     }
 
-
-}
+    public function delete($id)
+    {
+       $messages_manager = new \Model\MessagerieModel();
+       if($messages_manager->delete($id)) {
+           $this->flash('Le message a bien été supprimé.', 'success');
+       }
+       $this->redirectToRoute('messagerie_recu');
+   }
+    }

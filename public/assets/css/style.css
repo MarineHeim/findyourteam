@@ -74,6 +74,9 @@ body {
     padding-top: 15px;
 }
 
+.ui-widget-content {
+    background-color: white;
+}
 
 
 #sign {
@@ -572,21 +575,6 @@ svg {
 }
 /* FIN PAGE ONE GAME */
 
-#arrow-top{
-  color:#FFFFFF;
-  opacity: 0.5;
-  padding-top: 40px;
-  margin-bottom: 40px;
-  float: right;
-  z-index: 2000;
-  position:	fixed;
-  display: none;
-
-}
-#arrow-top:hover{
-  color:#FF5252;
-  opacity:1;
-}
 
 .SeeAllGames {
     background-color : #00BCD4;
@@ -665,6 +653,10 @@ svg {
     color : #00BCD4;
     background-color:#FFFFFF;
     border: none;
+}
+
+.presentation_gamer {
+    color: black;
 }
 /* FIN PROFIL*/
 
@@ -1151,7 +1143,8 @@ footer{
 .page_404 {
   background-image: url(../img/404.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
+  /*background-size: cover;*/
+  height: 1000px;
+  background-position: center;
  }
 /* FIN PAGE 404 */

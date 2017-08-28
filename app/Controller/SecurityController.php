@@ -73,10 +73,11 @@ class SecurityController extends \W\Controller\Controller
                 $user = $user_manager->find($user_check);
                 // On connecte l'utilisateur
                 $auth_manager->logUserIn($user);
+                $this->redirectToRoute('default_home');
             } else {
                 $this->flash('Login incorrect.', 'danger');
             }
-            $this->redirectToRoute('default_home');
+            $this->redirectToRoute('security_register');
         }
 
         $this->show('security/register', [

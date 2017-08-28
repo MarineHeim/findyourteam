@@ -1,6 +1,8 @@
-<?php $this->layout('layout', ['title' => 'Joueurs']) ?>
+<?php $this->layout('layout', ['title' => 'Accueil']) ?>
 
 <?php $this->start('main_content') ?>
+
+
 
 
 

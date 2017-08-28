@@ -7,6 +7,11 @@ class GameModel extends \W\Model\Model
     /**
      * Récupére toutes les jeux
      */
+    public function __construct()
+    {
+        parent::__construct();
+        $this->table = 'games';
+    }
 
     public function findAllGame()
     {

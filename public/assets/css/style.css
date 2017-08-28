@@ -1148,3 +1148,27 @@ footer{
   background-position: center;
  }
 /* FIN PAGE 404 */
+
+
+/* Page admin */
+.creategame {
+ color: #fff;
+ font-family: 'Lato', sans-serif;
+
+}
+
+.listinggame {
+ margin-top: 50px;
+ color: #fff;
+ font-family: 'Lato', sans-serif;
+}
+
+.btn_add_game {
+ display: block;
+ margin: auto;
+}
+
+.list_game {
+ border-color: #fff;
+}
+/* Fin page admin */

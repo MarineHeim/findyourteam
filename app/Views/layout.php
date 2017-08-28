@@ -134,7 +134,7 @@
 		             </ul>
 		        </div>
 		 			 <div class="text-center">
-		 				 <p class="droits-legal" >Find your mate © 2017 All rights reserved</p>
+		 				 <p class="droits-legal" >Find your team © 2017 All rights reserved</p>
 		 			 </div>
 			</footer>
 		</div>

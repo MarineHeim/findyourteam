@@ -36,10 +36,6 @@ $this->layout('layout', ['title' => 'Inscription / Connexion']); ?>
                     <span class="help-block"><?php echo isset($errors['password']) ? 'has-error' : ''; ?></span>
 
                   </div>
-                  <div class="col-xs-6 form-group pull-left checkbox">
-                    <input id="checkbox1" type="checkbox" name="remember">
-                    <label class="remember-me" for="checkbox1">Se souvenir de moi</label>
-                  </div>
                   <div class="col-xs-6 form-group pull-right">
                         <button name="loginForm" id="loginForm" tabindex="4" class="form-control btn btn-login">Connexion</button>
                   </div>

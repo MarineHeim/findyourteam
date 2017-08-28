@@ -59,18 +59,13 @@ class DefaultController extends Controller
 	{
 		$this->show('default/jeux');
 	}
-	public function players()
-	{
-		$this->show('default/players');
-	}
-
 
 	public function userListApi()
     {
         $user_manager = new \Model\UserModel();
         $users = $user_manager->search( [ 'username' => $_GET['term'] ] );
         foreach ($users as &$user) {
-            $user['url'] = $this->generateUrl('default_profile_view', ['username' => $user['username']]);
+            $user['url'] = $this->generateUrl('profile_profile_view', ['id' => $user['id']]);
         }
         $this->showJson($users); // Renvoie du json et pas html
     }

@@ -15,7 +15,7 @@ class UserModel extends \W\Model\UsersModel
 
     public function findAllUser($id)
     {
-        $query = $this->dbh->query('SELECT id, username, avatar, description, avatar, signup_date FROM users WHERE id="' . $id . '"');
+        $query = $this->dbh->query('SELECT * FROM users WHERE id = \''.$id.'\'');
         return $query->fetchAll();
     }
 

@@ -24,7 +24,7 @@
         <!-- Les derniers joueurs inscrits  -->
         <h4 class="last_gamers">Derniers joueurs inscrits</h4>
         <?php  foreach ($userongame as $userongames) { ?>
-        <div class="col-md-2 profilejeux">
+        <div class="col-md-3 profilejeux">
             <div class="text_gamers">
                 <h3><?php echo $userongames['username'] ?></h3>
                 <img class=" picture_gamers img-responsive" src="<?= $this->assetUrl('img/avatars/' . $userongames['avatar']) ?>" alt="...">
@@ -32,7 +32,8 @@
                 <p>Pseudo IG : <?php echo $userongames['pseudo'] ?></p>
                 <p>Niveau : <?php echo $userongames['niveau'] ?></p>
                 <p>Plateforme : <?php echo $userongames['plateforme'] ?></p>
-                <button href="<?= $this->url('profile_profile_view', ['id' => $user['id']]) ?>" class="btn btn-primary seeGamers" name="seeGamers">Voir profil</button>
+                <a href="<?= $this->url('profile_profile_view', ['id' => $userongames['id_joueur']]) ?>"><button class="btn btn-primary seeGamers" name="seeGamers">Voir profil</button></a>
+
                 <br><br>
             </div>
         </div>

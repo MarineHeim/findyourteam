@@ -6,6 +6,7 @@
 
 	<link rel="stylesheet" href="<?= $this->assetUrl('node_modules/bootstrap/dist/css/bootstrap.min.css') ?>">
 	<link rel="stylesheet" href="<?= $this->assetUrl('node_modules/font-awesome/css/font-awesome.min.css') ?>">
+	<link rel="stylesheet" href="<?= $this->assetUrl('node_modules/jquery-ui/jquery-ui.min.css') ?>">
 	<link rel="icon" type="image/png" href="<?= $this->assetUrl('img/favicon.png') ?>">
 	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:600" rel="stylesheet">
@@ -103,12 +104,6 @@
 		</section>
 	</div>
 
-		<!-- Arrow-top -->
-		<div class="container">
-				<a href="#"><i id="arrow-top" title="Retour en haut" class="fa fa-arrow-circle-up fa-3x"></i></a>
-		</div>
-
-		<!-- Arrow-top -->
 		<!-- Footer  -->
 		<div class="clear">
 
@@ -152,8 +147,8 @@
 	<script src="<?= $this->assetUrl('node_modules/jquery-ui/jquery-ui.js') ?>"></script>
 	<script src="<?= $this->assetUrl('node_modules/bootstrap/dist/js/bootstrap.min.js') ?>"></script>
 	<script src="<?= $this->assetUrl('anime-master/anime.min.js') ?>"></script>
-	<script src="<?= $this->assetUrl('script/login.js') ?>"></script>
-	<script src="<?= $this->assetUrl('script/research.js') ?>"></script>
+	<script src="<?= $this->assetUrl('js/login.js') ?>"></script>
+	<script src="<?= $this->assetUrl('js/research.js') ?>"></script>
 	<script src="<?= $this->assetUrl('js/arrow.js') ?>"></script>
 	<script src="<?= $this->assetUrl('js/bouton-contact.js') ?>"></script>
 

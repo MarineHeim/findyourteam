@@ -103,7 +103,6 @@
 			<?= $this->section('main_content') ?>
 		</section>
 	</div>
-
 		<!-- Footer  -->
 		<div class="clear">
 

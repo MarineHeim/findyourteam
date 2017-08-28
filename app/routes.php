@@ -42,4 +42,8 @@
 		['GET', '/jeux/[i:id]', 'Games#onegame', 'games_onegame'],
 		// Fin des pages des jeux
 
+		// Pages admins
+		['GET|POST', '/admin', 'Admin#gamescreate', 'admin_gamescreate'],
+		['GET|POST', '/admin/gamesdelete', 'Admin#gamesdelete', 'admin_gamesdelete'],
+		['GET|POST', '/admin/gamesupdate', 'Admin#gamesupdate', 'admin_updategame'],
 	);

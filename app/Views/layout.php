@@ -102,13 +102,6 @@
 			<?= $this->section('main_content') ?>
 		</section>
 	</div>
-
-		<!-- Arrow-top -->
-		<div class="container">
-				<a href="#"><i id="arrow-top" title="Retour en haut" class="fa fa-arrow-circle-up fa-3x"></i></a>
-		</div>
-
-		<!-- Arrow-top -->
 		<!-- Footer  -->
 		<div class="clear">
 

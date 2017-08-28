@@ -22,7 +22,7 @@ basicTimeline
     duration: 1200,
     height: 20,
     width: 300,
-    backgroundColor: "#FF5252",
+    backgroundColor: "#00BCD4",
     border: "0",
     borderRadius: 100
   })
@@ -60,16 +60,22 @@ $(".button").click(function() {
      type : 'POST', // Le type de la requête HTTP.
      data :  $('#form').serialize()
    }).done(function( data ) {
-      console.log(data);
-  });
+     console.log(data);
+     if (data.mail) {
+       $('#errorEmail').append(data.mail);
+       $('#errorEmail').show();
+     }
 
-});
+     if (data.message) {
+       $('#errorMessage').append(data.message);
+       $('#errorMessage').show();
+     }
 
-$(".text-envoyer").click(function() {
-  basicTimeline.play();
-  $.ajax({
-     url : '/findyourteam/public/contact', // La ressource ciblée
-     type : 'POST' // Le type de la requête HTTP.
-  });
+     if (data.success) {
+       $('#successMessage').append(data.success);
+       $('#successMessage').show();
+     }
+
+    });
 
 });

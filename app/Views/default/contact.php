@@ -10,14 +10,16 @@
     <form id="form" method="POST">
         <div class="form-group">
           <!-- Case Votre email -->
-            <label class="mail" for="mail" placeholder="monemail@maboitemail.com">Votre email :</label>
-            <input type="mail" name="mail" id="mail" class="form-control">
+            <label class="mail" for="mail">Votre email :</label>
+            <input type="mail" name="mail" id="mail" class="form-control" placeholder="monemail@maboitemail.com">
+            <div class="alert alert-danger" role="alert" id="errorEmail" style="display:none"></div>
             <!-- Fin case Votre email -->
         </div>
         <div class="form-group">
           <!-- Case message  -->
             <label class="message" for="message">Message :</label>
-            <textarea name="message" id="message" class="form-control"></textarea>
+            <textarea name="message" id="message" class="form-control"  placeholder="Mon message..."></textarea>
+            <div class="alert alert-danger" role="alert" id="errorMessage" style="display:none"></div>
             <!-- Fin case message  -->
         </div>
           <br>
@@ -34,6 +36,7 @@
               <path class="check" class="st0" d="M2,19.2C5.9,23.6,9.4,28,9.4,28L23,2"/>
             </svg>
           </main>
+          <div class="alert alert-success" role="alert" id="successMessage" style="display:none"></div>
         </div>
         <!-- Fin du bouton JS -->
     </form>

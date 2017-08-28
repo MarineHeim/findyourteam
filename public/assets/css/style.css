@@ -393,7 +393,7 @@ label {
 /*--BOUTON--*/
 #btn-inscritption{
   background-color : #00bcd4;
-  border-color: #fff;
+  border-color: #FFFFFF;
   font-family: 'Lato', sans-serif;
   font-size: 1.5em;
   letter-spacing: 0.15em;
@@ -401,7 +401,7 @@ label {
   margin-top:20px;
 }
 #btn-inscritption:hover{
-  background-color : #fff;
+  background-color : #FFFFFF;
   color: #00bcd4;
 }
 
@@ -461,13 +461,13 @@ main {
 #btn-contact:hover {
   width: 150px;
   border-radius: 4px;
-  background-color:#FFFFFF!important;
+  background-color:#358C96!important;
   transform: translateY(-50%);
   }
 
-#btn-contact:hover .text-envoyer {
-  color:#FF5252!important;
-}
+/*#btn-contact:hover .text-envoyer {
+  color:#FFFFFF!important;
+}*/
 
 .progress-bar {
   position: absolute;
@@ -480,6 +480,7 @@ main {
   transform: translateY(-50%) translateX(-50%);
   background: #358C96;
   background-color: #FFFFFF;
+  color : #00BCD4;
 }
 
 svg {

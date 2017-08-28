@@ -15,41 +15,62 @@ class DefaultController extends Controller
 		$this->show('default/home');
 	}
 
+		function printError ($error, $field) {
+	    foreach ($error as $data) {
+	         if ( $data['field'] == $field ) {
+	             return $data['messageAlert'];
+	         }
+	    }
+	}
+
 	public function contact()
 	{
 		$email = null;
 		$message= null;
-		if(isset($_POST['contactForm'])) {
-		$email = $_POST['mail'];
-		$message = $_POST['message'];
 
-		$send = true;
 
-		if (empty($email)) {
-		$send = false;
-		setFlashbag("Attention", "Veuillez renseigner une adresse email.");
-	}
-	elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-		setFlashbag("Attention", "Veuillez renseigner une adresse email valide.");
+		if (!empty($_POST)) {
 
-	}
-		 }
 
-		  $mailDestinataire="marine.heim@outlook.com";
+			$send = true;
+
+	    // Récupération des données de $_POST
+	    $email      = ($_POST['mail']);
+	    $message   = ($_POST['message']);
+
+	    // Création du tableau d'erreur
+	    $error = [];
+
+
+				if (!filter_var($email, FILTER_VALIDATE_EMAIL))
+			{
+					$error['mail'] = 'Vous devez saisir une adresse email valide (user@domain.com).';
+			}
+				if (empty($message)) {
+					$error['message'] = 'Vous devez saisir un message.';
+				}
+
+
+			$mailDestinataire="marine.heim@outlook.com";
 
 			$from = "From: <".$email.">";
 
 			$messageMail = "Formulaire de contact:
-		      						Email :   ".$email."
+											Email :   ".$email."
 											Message :   ".$message."";
 
 			mail($mailDestinataire, $messageMail, $from, $message);
 
-						if (!empty($_POST)) {
+						if (empty($error)) {
 						$this->showJson(['success'=>'Votre message a bien été envoyé.']);
-						}
+					}else {
+						$this->showJson($error);
+
+					}
+		 }
 
 		$this->show('default/contact');
+
 	}
 	public function inscription()
 	{

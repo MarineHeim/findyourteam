@@ -45,6 +45,5 @@
 
 		// Pages admins
 		['GET|POST', '/admin', 'Admin#gamescreate', 'admin_gamescreate'],
-		['GET|POST', '/admin/gamesdelete', 'Admin#gamesdelete', 'admin_gamesdelete'],
-		['GET|POST', '/admin/gamesupdate', 'Admin#gamesupdate', 'admin_updategame'],
+		['GET|POST', '/admin/gamesdelete/[i:id]', 'Admin#gamesdelete', 'admin_gamesdelete'],
 	);

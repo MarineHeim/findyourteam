@@ -57,12 +57,19 @@ class AdminController extends Controller
             }
         $this->show('/admin/gamescreate', ['games' => $games]);
     }
-    public function gamesdelete(){
 
-        $this->show('/admin/gamesdelete');
-    }
-    public function gamesupdate(){
 
-        $this->show('/admin/gamesupdate');
-    }
+    public function gamesdelete($id)
+      {
+          $admin_manager = new \Model\AdminModel();
+          $user = $this->getUser();
+          $jeux = $admin_manager->find($id);
+
+              if ($admin_manager->delete($id)) {
+                  // On enregistre un message en session
+                  $this->flash('Le jeu a bien été supprimée.', 'success');
+              }
+
+          $this->redirectToRoute('admin_gamescreate');
+      }
 }

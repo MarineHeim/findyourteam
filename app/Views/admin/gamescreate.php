@@ -32,14 +32,17 @@
         <h4>Listes des jeux</h4>
         <?php  foreach ($games as $game) { ?>
             <div class="">
-                <!-- <img class="img-responsive" src="assets/img/jeux/<?php echo $game['picture']; ?>" alt="..."> -->
-             <!-- Fin Image et lien du jeu -->
                <!-- Titre des jeux -->
                <div class="col-md-2">
                 <h3 class="title-game"><?php echo $game['name'] ?></h3>
                </div>
                <div class="col-md-4">
                 <p id="description" class="text-justify" ><?php echo $game['description'] ?></p>
+               </div>
+               <div class="">
+                 <a href="<?= $this->url('admin_gamesdelete', ['id' => $game['id']]); ?>" onclick="return confirm('Voulez-vous supprimer ?');">
+                   <button type="reset"  name="Effacer" class="btn btn-default btn_message">Supprimer ce jeu</button>
+               </a>
                </div>
             </div>
         <?php } ?>

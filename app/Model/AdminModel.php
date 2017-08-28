@@ -16,17 +16,8 @@ class AdminModel extends \W\Model\Model
 
         return $this->lastInsertId();
     }
-    // public function deleteGames()
-    // {
-    //     $query = $this->dbh->prepare("DELETE FROM games WHERE xxxx = xxxx");
-    //
-    // }
-    // public function updateGames()
-    // {
-    //     $query = $this->dbh->prepare("UPDATE games
-    //         SET name = 'xxxx',
-    //             description = 'xxxx'
-    //             picture ='xxxx'
-    //         WHERE xxxx= xxxx");
-    // }
+
+    public function delete($iddujeux) {
+       return $this->dbh->query('DELETE FROM `games` WHERE id = \''.$iddujeux.'\'');
+   }
 }

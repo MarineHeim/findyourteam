@@ -12,10 +12,13 @@
 <br>
 <br>
 
-<?php  foreach ($messagesrecus as $messagesrecu) { ?>
   <!-- Boîte de réception -->
 <div class="boite_reception">
+    <?php  if(!$messagesrecus) {
+        echo "<center>Vous n'avez aucun nouveau message.</center>";
+    }; ?>
     <div class="row">
+        <?php foreach ($messagesrecus as $messagesrecu) { ?>
         <div class="messagesrecus">
             <a href="<?= $this->url('messagerie_lecture', ['id' => $messagesrecu['id']]); ?>">
 
@@ -45,7 +48,7 @@
 
             <div class="col-md-2">
               <!-- Bouton suppression d'un message -->
-                <a href="<?= $this->url('messagerie_delete', ['id' => $messagesrecu['id']]); ?>" onclick="return confirm('Voulez-vous supprimer ?');">
+                <a href="<?= $this->url('comments_delete', ['id' => $messagesrecu['id']]); ?>" onclick="return confirm('Voulez-vous supprimer ?');">
                     <button type="reset"  name="Effacer" class="btn btn-default btn_message">Supprimer ce message</button>
                 </a>
                 <!-- Fin Bouton suppression d'un message -->

@@ -2,24 +2,28 @@
 
 <?php $this->start('main_content'); ?>
 
-<!-- <h1 class="text-center">Formulaire de contact</h1>
-<br>
-<br> -->
+<!-- Paragraphe -->
 <p id="txt-contact" class="text-center">N'hésitez pas à nous contacter pour toute demande, nous vous répondrons dans les plus brefs délais.</p>
+<!-- Fin du paragraphe -->
 <br>
     <!-- Formulaire de contact -->
     <form id="form" method="POST">
         <div class="form-group">
-            <label class="mail" for="mail" placeholder="monemail@maboitemail.com">Email :</label>
+          <!-- Case Votre email -->
+            <label class="mail" for="mail" placeholder="monemail@maboitemail.com">Votre email :</label>
             <input type="mail" name="mail" id="mail" class="form-control">
+            <!-- Fin case Votre email -->
         </div>
         <div class="form-group">
+          <!-- Case message  -->
             <label class="message" for="message">Message :</label>
             <textarea name="message" id="message" class="form-control"></textarea>
+            <!-- Fin case message  -->
         </div>
           <br>
           <br>
         <div class="text-center" >
+          <!-- Bouton JS -->
           <main>
             <div name="contactForm" class="button animate">
               <div   class="text-envoyer">Envoyer</div>
@@ -31,6 +35,7 @@
             </svg>
           </main>
         </div>
+        <!-- Fin du bouton JS -->
     </form>
     <!-- Fin du formulaire de contact -->
 <?php $this->stop('main_content'); ?>

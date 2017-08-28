@@ -13,6 +13,7 @@
 <br>
 
 <?php  foreach ($messagesrecus as $messagesrecu) { ?>
+  <!-- Boîte de réception -->
 <div class="boite_reception">
     <div class="row">
         <div class="messagesrecus">
@@ -43,7 +44,9 @@
             </div>
 
             <div class="col-md-2">
+              <!-- Bouton suppression d'un message -->
                 <button type="reset"  name="Effacer" class="btn btn-default btn_message">Supprimer ce message</button>
+                <!-- Fin Bouton suppression d'un message -->
             </div>
 
             <br>
@@ -51,6 +54,7 @@
         </div>
     </div>
 </div>
+<!-- Fin de la Boîte de réception -->
 
 
         <?php }?>

@@ -13,7 +13,7 @@
     <br>
 
     <?php  foreach ($messagesenvoyes as $messagesenvoye) { ?>
-    <!-- Présentation du jeu -->
+    <!-- Boite d'envoi -->
     <div class=" boite_reception">
         <div class="row">
             <div class="messagesrecus">
@@ -48,6 +48,7 @@
             </div>
         </div>
     </div>
+    <!-- Fin de la Boite d'envoi' -->
     <?php }
     ?>
 

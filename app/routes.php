@@ -25,11 +25,9 @@
 		['GET|POST', '/profile', 'Profile#profile', 'profile_profile'],
 		// Fin pages du profil
 
-		// Pages des équipes et des joueurs
-		['GET|POST', '/teams', 'Teams#teams', 'teams_teams'],
-		['GET|POST', '/teams/create', 'Teams#createTeam', 'teams_create'],
+		// Pages joueurs
 		['GET|POST', '/players', 'Default#players', 'default_players'],
-		// Fin des pages des équipes et des joueurs
+		// Fin des joueurs
 
 		// Pages de la messagerie interne
 		['GET|POST', '/messagerie', 'Messagerie#envoi', 'messagerie_envoi'],
@@ -43,4 +41,5 @@
 		['GET', '/jeux', 'Games#allgames', 'games_allgames'],
 		['GET', '/jeux/[i:id]', 'Games#onegame', 'games_onegame'],
 		// Fin des pages des jeux
+
 	);

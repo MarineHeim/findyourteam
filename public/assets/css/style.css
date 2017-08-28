@@ -194,9 +194,6 @@ label {
 }
 .panel-login {
    border: none;
-  -webkit-box-shadow: 0px 0px 49px 14px rgba(188,190,194,0.39);
-  -moz-box-shadow: 0px 0px 49px 14px rgba(188,190,194,0.39);
-  box-shadow: 0px 0px 49px 14px rgba(188,190,194,0.39);
   }
 .panel-login .checkbox input[type=checkbox]{
   margin-left: 0px;
@@ -395,8 +392,8 @@ label {
 
 /*--BOUTON--*/
 #btn-inscritption{
-  background-color : transparent;
-  border-color: #00bcd4;
+  background-color : #00bcd4;
+  border-color: #fff;
   font-family: 'Lato', sans-serif;
   font-size: 1.5em;
   letter-spacing: 0.15em;
@@ -404,8 +401,8 @@ label {
   margin-top:20px;
 }
 #btn-inscritption:hover{
-  background-color : #00bcd4;
-  color: #FFFFFF;
+  background-color : #fff;
+  color: #00bcd4;
 }
 
 /*--FIN HOME PAGE--*/
@@ -533,6 +530,47 @@ svg {
 }
 /*--FIN ALL GAMES--*/
 
+/* PAGE ONE GAME */
+
+.onegame p {
+  color: #FFFFFF;
+  font-family: 'Lato', sans-serif;
+}
+
+.last_gamers{
+  color: #FFFFFF;
+  font-family: 'Lato', sans-serif;
+  font-size: 25px;
+}
+
+.seeGamers {
+  background-color: #00bcd4;
+  color: #FFFFFF;
+  border: none;
+}
+.seeGamers:hover {
+  background-color: #FFFFFF;
+  color: #00bcd4;
+  border: none;
+}
+
+.picture_gamers {
+  height: 150px;
+  width: 150px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.text_gamers p,h3 {
+  color: #FFFFFF;
+}
+
+.profilejeux {
+  margin: auto;
+  display: block;
+}
+/* FIN PAGE ONE GAME */
+
 #arrow-top{
   color:#FFFFFF;
   opacity: 0.5;
@@ -632,14 +670,14 @@ svg {
 /* MESSAGERIE */
 
 .send_mail {
-    color: #00BCD4;
-    background-color: #FFFFFF;
+    color: #FFFFFF;
+    background-color: #00BCD4;
     border: none;
 }
 
 .send_mail:hover {
-    color: #FFFFFF ;
-    background-color: #00BCD4 ;
+    color: #00BCD4 ;
+    background-color: #FFFFFF ;
     border: none;
 }
 
@@ -1093,3 +1131,26 @@ footer{
     margin: 50px auto 30px;
   }
 }
+
+.contactUser {
+  display: block;
+  margin : auto;
+  background-color: #00bcd4;
+  color: #fff;
+}
+
+.contactUser:hover {
+  display: block;
+  margin : auto;
+  background-color: #fff;
+  color: #00bcd4;
+}
+
+/* PAGE 404 */
+.page_404 {
+  background-image: url(../img/404.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+ }
+/* FIN PAGE 404 */

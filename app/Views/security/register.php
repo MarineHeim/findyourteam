@@ -17,6 +17,7 @@ $this->layout('layout', ['title' => 'Inscription / Connexion']); ?>
 <?php $this->start('main_content'); ?>
 
   <div>
+    <!-- Formulaire de Connexion -->
    <div class="row">
     <div class="col-md-6 col-md-offset-3">
       <div class="panel panel-login">
@@ -43,7 +44,9 @@ $this->layout('layout', ['title' => 'Inscription / Connexion']); ?>
                         <button name="loginForm" id="loginForm" tabindex="4" class="form-control btn btn-login">Connexion</button>
                   </div>
               </form>
+              <!-- Fin du formulaire de connexion -->
 
+              <!-- Formulaire d'inscription -->
               <form id="register-form" action="" method="post" role="form" style="display: none;">
                 <h2 class="title-register" >S'ENREGISTRER</h2>
                   <div class="form-group <?php echo isset($errors['login']) ? 'has-error' : ''; ?>">
@@ -70,16 +73,21 @@ $this->layout('layout', ['title' => 'Inscription / Connexion']); ?>
                     </div>
                   </div>
               </form>
+              <!-- Fin du formulaire d'inscription -->
             </div>
           </div>
         </div>
         <div class="panel-heading">
           <div class="row">
             <div class="col-xs-6 tabs">
+              <!-- Bouton de connexion -->
               <a href="#" class="active" id="login-form-link"><div class="login">CONNEXION</div></a>
+              <!-- Fin du bouton de connexion -->
             </div>
             <div class="col-xs-6 tabs">
+              <!-- Bouton d'inscription -->
               <a href="#" id="register-form-link"><div class="register">S'ENREGISTRER</div></a>
+              <!-- Fin du bouton d'inscription -->
             </div>
           </div>
         </div>
@@ -88,12 +96,5 @@ $this->layout('layout', ['title' => 'Inscription / Connexion']); ?>
   </div>
 </div>
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 <?php $this->stop('main_content'); ?>

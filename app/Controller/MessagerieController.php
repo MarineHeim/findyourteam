@@ -86,7 +86,7 @@ class MessagerieController extends Controller
 
            if ($messages_manager->delete($id)) {
                // On enregistre un message en session
-               $this->flash('Le message a bien été supprimée.', 'success');
+               $this->flash('Le message a bien été supprimé.', 'success');
            }
 
        $this->redirectToRoute('messagerie_recu');

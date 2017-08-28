@@ -19,13 +19,13 @@
             <div class="messagesrecus">
                 <a href="<?= $this->url('messagerie_lecture', ['id' => $messagesenvoye['id']]); ?>">
 
-                <div class="col-md-3">
+                <div class="col-md-2">
                 <h4 class="text-center">Destinataire  </h4>
                 <p class="text-center"><?php echo $messagesenvoye['destinataire'] ?></p>
                 </div>
 
 
-                <div class="col-md-3">
+                <div class="col-md-2">
                 <h4 class="text-center">Titre  </h4>
                 <p class="text-center"><?php echo $messagesenvoye['titre'] ?></p>
                 </div>
@@ -42,6 +42,13 @@
                 <p class="text-center"><?php echo $messagesenvoye['time'] ?></p>
                 </a>
                 </div>
+
+                <div class="col-md-2">
+                  <!-- Bouton suppression d'un message -->
+                    <a href="<?= $this->url('comments_delete', ['id' => $messagesenvoye['id']]); ?>" onclick="return confirm('Voulez-vous supprimer ?');">
+                        <button type="reset"  name="Effacer" class="btn btn-default btn_message">Supprimer ce message</button>
+                    </a>
+                    <!-- Fin Bouton suppression d'un message -->
 
                 <br>
                 <br>

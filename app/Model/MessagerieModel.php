@@ -24,4 +24,17 @@ class MessagerieModel extends \W\Model\Model
         $query = $this->dbh->query('SELECT * FROM messagerie');
         return $query->fetchAll();
     }
+
+    // public function delete($messagerie) {
+    //     $query = $this->dbh->prepare('DELETE FROM messagerie (id, expediteur, destinataire, titre, text, time, lu)
+    //     VALUES (:id, :expediteur, :destinataire, :titre, :text, :time, :lu)');
+    //     $query->bindValue(':id', $messagerie['id']);
+    //     $query->bindValue(':expediteur', $messagerie['expediteur']);
+    //     $query->bindValue(':destinataire', $messagerie['destinataire']);
+    //     $query->bindValue(':text', $messagerie['text']);
+    //     $query->bindValue(':time', $messagerie['time']);
+    //     $query->bindValue(':lu', $messagerie['lu']);
+    //     $query->execute();
+    //     return $query->execute;
+    // }
 }

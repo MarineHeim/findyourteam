@@ -34,7 +34,7 @@
 				<div class="">
 					<h3>Ta présentation :</h3>
 					<form id="updatedescription" method="post">
-					<textarea class="form-control" rows="8" cols="100" name="description" id="description"></textarea><br>
+					<textarea class="form-control presentation_gamer" rows="8" cols="100" name="description"></textarea><br>
 					<button class="btn btn-default modifier_description" name="updatedescription" id="updatedescription">Ajouter/modifier description</button>
 					</form>
 				</div>
@@ -53,7 +53,8 @@
 					<div>
 						<label>Choisis ton jeu :</label>
 
-						<select class="form-control" name="jeux" id="jeux">
+						<select class="form-control" name="jeux" id="jeux" required>
+							<option value=""></option>
 							<?php  foreach ($games as $game) { ?>
 							<option value="<?php echo $game['id']?>"><?php echo $game['name'] ?></option>
 							<?php } ?>
@@ -64,8 +65,8 @@
 
 					<div>
 						<label>Plateforme :</label>
-						<select class="form-control" name="plateforme" id="plateforme">
-						  <option>---</option>
+						<select class="form-control" name="plateforme" id="plateforme" required>
+						  <option value=""></option>
 						  <option>PC</option>
 						  <option>PS3</option>
 						  <option>PS4</option>
@@ -78,13 +79,13 @@
 
 					<div class="form-group">
 					    <label for="pseudo">Pseudo en jeu :</label>
-					    <input type="text" class="form-control" id="pseudo" name="pseudo" placeholder="Pseudo du joueur">
+					    <input type="text" class="form-control" id="pseudo" name="pseudo" placeholder="Pseudo du joueur" required="Veuillez renseigner ce champ">
 				  	</div>
 
 					<div>
 						<label>Niveau:</label>
-						<select class="form-control" name="niveau" id="niveau">
-						  <option>---</option>
+						<select class="form-control" name="niveau" id="niveau" required>
+						  <option value=""></option>
 						  <option>Débutant</option>
 						  <option>Intermédiaire</option>
 						  <option>Expérimenté</option>

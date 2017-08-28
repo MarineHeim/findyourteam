@@ -45,7 +45,9 @@
 
             <div class="col-md-2">
               <!-- Bouton suppression d'un message -->
-                <button type="reset"  name="Effacer" class="btn btn-default btn_message">Supprimer ce message</button>
+                <a href="<?= $this->url('messagerie_delete', ['id' => $messagesrecu['id']]); ?>" onclick="return confirm('Voulez-vous supprimer ?');">
+                    <button type="reset"  name="Effacer" class="btn btn-default btn_message">Supprimer ce message</button>
+                </a>
                 <!-- Fin Bouton suppression d'un message -->
             </div>
 

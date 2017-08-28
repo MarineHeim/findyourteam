@@ -84,11 +84,14 @@ class ProfileController extends Controller
         $this->show('profile/profile', ['user' => $user, 'games' => $games]);
     }
 
-    public function profileView($username){
-
-        $user = $this->getUser(); // Récupére l'utilisateur connecté
+    public function profileView($id){
 
         $usergame_manager = new \Model\UserModel();
+        $user = $this->getUser(); // Récupére l'utilisateur connecté
+        if ($user['id'] != $id) {
+            $user = $usergame_manager->find($id);
+        }
+
         $usergame = $usergame_manager->findAllGameByUser($user['id']); // Récupére les jeux de l'utilisateur
 
         $user_manager = new \Model\UserModel();

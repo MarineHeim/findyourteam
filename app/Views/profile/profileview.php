@@ -43,7 +43,7 @@
                             <!-- Fin jeux auwquels joue l'internaute -->
                             <?php } ?>
                             <!-- Bouton "contacter ce joueur" -->
-                            <button name="contactUser" class="btn btn-default contactUser">Contacter ce joueur</button>
+                            <a href="<?= $this->url('messagerie_envoi') ?>"><button name="contactUser" class="btn btn-default contactUser">Contacter ce joueur</button></a>
                             <!-- Fin du bouton "contacter ce joueur" -->
 
                         </div>

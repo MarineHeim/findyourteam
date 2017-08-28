@@ -49,9 +49,6 @@ class MessagerieController extends Controller
 
 
         $messagesrecus = $messages_manager->SeeAllMessage($this->getUser()['username']);
-        if (!$messagesrecus) {
-            echo 'Vous n\'avez aucun message.';
-        }
         $this->show('/messagerie/recu', ['messagesrecus' => $messagesrecus,
                                         'messagesenvoyes' => $messagesenvoyes]);
     }
@@ -64,9 +61,6 @@ class MessagerieController extends Controller
 
 
         $messagesenvoyes = $messages_manager->SeeSendMessage($this->getUser()['username']);
-        if (!$messagesenvoyes) {
-            echo 'Vous n\'avez aucun message envoyé.';
-        }
 
         $this->show('/messagerie/envoye', ['messagesenvoyes' => $messagesenvoyes,
                                           'messagesrecus' => $messagesrecus]);
@@ -83,12 +77,18 @@ class MessagerieController extends Controller
         $this->show('/messagerie/lecture', ['messagelecture' => $messagelecture]);
     }
 
-    public function delete($id)
-    {
+
+   public function delete($id)
+   {
        $messages_manager = new \Model\MessagerieModel();
-       if($messages_manager->delete($id)) {
-           $this->flash('Le message a bien été supprimé.', 'success');
-       }
+       $user = $this->getUser();
+       $messages = $messages_manager->find($id);
+
+           if ($messages_manager->delete($id)) {
+               // On enregistre un message en session
+               $this->flash('Le message a bien été supprimée.', 'success');
+           }
+
        $this->redirectToRoute('messagerie_recu');
    }
-    }
+}

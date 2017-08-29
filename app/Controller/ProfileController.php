@@ -97,6 +97,23 @@ class ProfileController extends Controller
         $user_manager = new \Model\UserModel();
         $oneprofile = $user_manager->findAllUser($user['id']);
 
+
+        if(isset($_POST['sendmailuser'])){
+                $messages_manager = new \Model\MessagerieModel();
+                $destinataires = $user['username'];
+                $titre = $_POST['sujet'];
+                $text = $_POST['text'];
+                $message = $messages_manager->insert([
+                    'expediteur' => $this->getUser()['username'],
+                    'destinataire' => $destinataires,
+                    'titre' => $titre,
+                    'text' => $text,
+                    'time' => (new \DateTime('now'))->format('Y-m-d H:i:s')
+                ]);
+
+                $this->flash('Votre message a été envoyé.', 'success');
+            }
+
         $this->show('/profile/profileview', ['user' => $user, 'oneprofile' => $oneprofile, 'usergame' => $usergame]);
     }
 }

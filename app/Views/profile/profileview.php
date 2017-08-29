@@ -43,7 +43,27 @@
                             <!-- Fin jeux auwquels joue l'internaute -->
                             <?php } ?>
                             <!-- Bouton "contacter ce joueur" -->
-                            <a href="<?= $this->url('messagerie_envoi') ?>"><button name="contactUser" class="btn btn-default contactUser">Contacter ce joueur</button></a>
+                            <button type="button" class="btn btn-default contactUser" data-toggle="modal" data-target="#myModal">
+                              Contacter ce joueur
+                            </button>
+
+                              <!-- Modal -->
+                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            <h4 class="modal-title" id="myModalLabel">Contacter ce joueur</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                          <?php require 'contactuser.php' ?>
+                                        </div>
+                                        <div class="modal-footer">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <!-- Fin du bouton "contacter ce joueur" -->
 
                         </div>

@@ -1094,15 +1094,23 @@ footer{
 
 /* PAGE 404 */
 .page_404 {
-  background-image: url(../img/404.jpg);
+  background-image: url(../img/404.png);
   background-repeat: no-repeat;
-  /*background-size: cover;*/
+  background-size: 70%;
   height: 1000px;
-  background-position: center;
+  background-position: top;
  }
 /* FIN PAGE 404 */
 
-
+/* PAGE 403 */
+.page_403 {
+  background-image: url(../img/403.png);
+  background-repeat: no-repeat;
+  background-size: 70%;
+  height: 1000px;
+  background-position: top;
+ }
+/* FIN PAGE 404 */
 /* Page admin */
 .creategame {
  color: #fff;

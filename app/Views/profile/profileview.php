@@ -3,14 +3,11 @@
 <?php $this->start('main_content') ?>
 
 <div class="navigation">
-    <a href="<?= $this->url('profile_profile') ?>"><button class="btn  modifier_profil <?= ($w_current_route === 'profile_profile') ? 'active' : ''; ?>" type="button" name="modifier_profil">Modifier profil</button></a>
-    <a href="<?= $this->url('profile_profile_view', ['id' => $user['id']]) ?>"><button class="btn btn-default voir_profil <?= ($w_current_route === 'profile_profileview') ? 'active' : ''; ?>" type="button" name="modifier_profil">Voir profil</button></a>
-</div>
 
 
                 <?php  foreach ($oneprofile as $profiles) {;?>
                   <!-- Profil des joueurs -->
-                    <div class="rela-block">
+                    <div class="rela-block" style="margin-top:130px;">
                         <div class="rela-block profile-card">
                                 <!-- Photo du joueur -->
                                 <img class="profile-pic" src="<?= $this->assetUrl('img/avatars/' . $profiles['avatar']) ?>" alt="<?= $profiles['avatar'] ?>">
@@ -43,6 +40,8 @@
                             <!-- Fin jeux auwquels joue l'internaute -->
                             <?php } ?>
                             <!-- Bouton "contacter ce joueur" -->
+
+
                             <button type="button" class="btn btn-default contactUser" data-toggle="modal" data-target="#myModal">
                               Contacter ce joueur
                             </button>
